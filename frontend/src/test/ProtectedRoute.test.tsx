@@ -1,128 +1,169 @@
-/**
- * Tests for src/components/ProtectedRoute.tsx + src/components/ErrorBoundary.tsx
- *
- * Pilar 2: ProtectedRoute — auth redirect, role guard
- * Pilar 4: ErrorBoundary — crash recovery UI
- */
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { AuthProvider } from '@/contexts/AuthContext';
+import { useAuth } from '@/contexts/AuthContext';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import type { ReactNode } from 'react';
 
-vi.mock('@/config/walletConfig', () => ({
-  appKit: { disconnect: vi.fn().mockResolvedValue(undefined) },
+vi.mock('@/contexts/AuthContext', () => ({
+  useAuth: vi.fn(),
 }));
 
-vi.mock('@/services/api', () => ({
-  api: { post: vi.fn().mockResolvedValue({}) },
+vi.mock('react-router-dom', () => ({
+  Navigate: ({ to }: { to: string }) => (
+    <div data-testid="navigate">redirect:{to}</div>
+  ),
 }));
 
-// ─── Wrappers ─────────────────────────────────────────────────────────────────
-
-interface WrapperProps {
-  children: ReactNode;
-  initialPath?: string;
-}
-
-/**
- * Full router wrapper with AuthProvider.
- * Also adds a /login route so we can detect redirects.
- */
-function RouterWrapper({ children, initialPath = '/protected' }: WrapperProps) {
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
-  return (
-    <QueryClientProvider client={queryClient}>
-      <MemoryRouter initialEntries={[initialPath]}>
-        <AuthProvider>
-          <Routes>
-            <Route path="/login" element={<div>Login Page</div>} />
-            <Route path="/protected" element={children} />
-            <Route path="/protected/:id" element={children} />
-          </Routes>
-        </AuthProvider>
-      </MemoryRouter>
-    </QueryClientProvider>
-  );
-}
-
-// ─── Setup ────────────────────────────────────────────────────────────────────
+const mockUseAuth = vi.mocked(useAuth);
 
 beforeEach(() => {
   localStorage.clear();
   sessionStorage.clear();
+  vi.clearAllMocks();
 });
 
 // ─── ProtectedRoute ───────────────────────────────────────────────────────────
 
 describe('ProtectedRoute', () => {
   it('redirects to /login when not authenticated', () => {
+    mockUseAuth.mockReturnValue({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+      login: vi.fn(),
+      logout: vi.fn(),
+    });
+
     render(
-      <RouterWrapper>
-        <ProtectedRoute>
-          <div>Secret Dashboard</div>
-        </ProtectedRoute>
-      </RouterWrapper>,
+      <ProtectedRoute>
+        <div>Secret Dashboard</div>
+      </ProtectedRoute>,
     );
 
-    expect(screen.getByText('Login Page')).toBeInTheDocument();
-    expect(screen.queryByText('Secret Dashboard')).not.toBeInTheDocument();
+    expect(screen.getByTestId('navigate')).toHaveTextContent(
+      'redirect:/login',
+    );
+
+    expect(
+      screen.queryByText('Secret Dashboard'),
+    ).not.toBeInTheDocument();
   });
 
   it('renders children when authenticated (no role check)', () => {
-    localStorage.setItem('user', JSON.stringify({
-      id: 1, email: 'a@b.com', role: 'issuer',
-      name: 'Ana', lastName: null, walletAddress: null,
-    }));
+    mockUseAuth.mockReturnValue({
+      user: {
+        id: 1,
+        email: 'a@b.com',
+        role: 'issuer',
+        name: 'Ana',
+        lastName: null,
+        walletAddress: null,
+      },
+      isAuthenticated: true,
+      isLoading: false,
+      login: vi.fn(),
+      logout: vi.fn(),
+    });
 
     render(
-      <RouterWrapper>
-        <ProtectedRoute>
-          <div>Educator Dashboard</div>
-        </ProtectedRoute>
-      </RouterWrapper>,
+      <ProtectedRoute>
+        <div>Educator Dashboard</div>
+      </ProtectedRoute>,
     );
 
-    expect(screen.getByText('Educator Dashboard')).toBeInTheDocument();
+    expect(
+      screen.getByText('Educator Dashboard'),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('navigate'),
+    ).not.toBeInTheDocument();
   });
 
   it('renders children when user has the required role', () => {
-    localStorage.setItem('user', JSON.stringify({
-      id: 2, email: 'r@b.com', role: 'recruiter',
-      name: 'Bob', lastName: null, walletAddress: null,
-    }));
+    mockUseAuth.mockReturnValue({
+      user: {
+        id: 2,
+        email: 'r@b.com',
+        role: 'recruiter',
+        name: 'Bob',
+        lastName: null,
+        walletAddress: null,
+      },
+      isAuthenticated: true,
+      isLoading: false,
+      login: vi.fn(),
+      logout: vi.fn(),
+    });
 
     render(
-      <RouterWrapper>
-        <ProtectedRoute roles={['recruiter']}>
-          <div>Recruiter Dashboard</div>
-        </ProtectedRoute>
-      </RouterWrapper>,
+      <ProtectedRoute roles={['recruiter']}>
+        <div>Recruiter Dashboard</div>
+      </ProtectedRoute>,
     );
 
-    expect(screen.getByText('Recruiter Dashboard')).toBeInTheDocument();
+    expect(
+      screen.getByText('Recruiter Dashboard'),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('navigate'),
+    ).not.toBeInTheDocument();
   });
 
   it('redirects to /login when authenticated but wrong role', () => {
-    localStorage.setItem('user', JSON.stringify({
-      id: 3, email: 's@b.com', role: 'student',
-      name: 'Sam', lastName: null, walletAddress: null,
-    }));
+    mockUseAuth.mockReturnValue({
+      user: {
+        id: 3,
+        email: 's@b.com',
+        role: 'student',
+        name: 'Sam',
+        lastName: null,
+        walletAddress: null,
+      },
+      isAuthenticated: true,
+      isLoading: false,
+      login: vi.fn(),
+      logout: vi.fn(),
+    });
 
     render(
-      <RouterWrapper>
-        <ProtectedRoute roles={['issuer']}>
-          <div>Educator Only</div>
-        </ProtectedRoute>
-      </RouterWrapper>,
+      <ProtectedRoute roles={['issuer']}>
+        <div>Educator Only</div>
+      </ProtectedRoute>,
     );
 
-    // Wrong role → redirected to /login
-    expect(screen.getByText('Login Page')).toBeInTheDocument();
-    expect(screen.queryByText('Educator Only')).not.toBeInTheDocument();
+    expect(screen.getByTestId('navigate')).toHaveTextContent(
+      'redirect:/login',
+    );
+
+    expect(
+      screen.queryByText('Educator Only'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a loading indicator while authentication is loading', () => {
+    mockUseAuth.mockReturnValue({
+      user: null,
+      isAuthenticated: false,
+      isLoading: true,
+      login: vi.fn(),
+      logout: vi.fn(),
+    });
+
+    render(
+      <ProtectedRoute>
+        <div>Secret Dashboard</div>
+      </ProtectedRoute>,
+    );
+
+    expect(
+      screen.queryByText('Secret Dashboard'),
+    ).not.toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('navigate'),
+    ).not.toBeInTheDocument();
   });
 });
 
@@ -142,12 +183,16 @@ describe('ErrorBoundary', () => {
         <div>All Good</div>
       </ErrorBoundary>,
     );
-    expect(screen.getByText('All Good')).toBeInTheDocument();
+
+    expect(
+      screen.getByText('All Good'),
+    ).toBeInTheDocument();
   });
 
   it('shows error UI when a child throws', () => {
-    // Suppress the expected console.error from ErrorBoundary
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleSpy = vi
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
     render(
       <ErrorBoundary>
@@ -155,14 +200,21 @@ describe('ErrorBoundary', () => {
       </ErrorBoundary>,
     );
 
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText('Reload Page')).toBeInTheDocument();
+    expect(
+      screen.getByText('Something went wrong'),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText('Reload Page'),
+    ).toBeInTheDocument();
 
     consoleSpy.mockRestore();
   });
 
   it('shows the error message in the details section', () => {
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleSpy = vi
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
     render(
       <ErrorBoundary>
@@ -170,7 +222,11 @@ describe('ErrorBoundary', () => {
       </ErrorBoundary>,
     );
 
-    expect(screen.getByText('Render bomb!')).toBeInTheDocument();
+    expect(
+      screen.getByText('Render bomb!'),
+    ).toBeInTheDocument();
+
     consoleSpy.mockRestore();
   });
 });
+

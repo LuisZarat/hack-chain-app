@@ -6,7 +6,7 @@ import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Award, ChevronDown, Wallet, Briefcase, LogOut, CheckCircle, XCircle, Copy, Check, RefreshCw } from 'lucide-react';
+import { Award, ChevronDown, Wallet, Briefcase, Plus, LogOut, CheckCircle, XCircle, Copy, Check, RefreshCw } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { api } from '@/services/api';
 import { useQueryClient } from "@tanstack/react-query";
@@ -195,20 +195,20 @@ const RecruiterDashboard = () => {
                                             </div>
 
                                             <div className="space-y-2">
-                                                <div className="flex items-start gap-3 py-3 border-b border-white/10 last:border-b-0">
-                                                    <Briefcase className="h-4 w-4 text-slate-400 mt-0.5" />
-                                                    <div>
+                                                <div className="flex items-start gap-3 rounded-xl border border-white/10 px-3 py-3 transition-colors hover:bg-blue-500/10">
+                                                    <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-blue-300" />
+                                                    <div className="flex-1 min-w-0">
                                                         <p className="text-xs uppercase text-slate-500 font-semibold font-body">{t('recruiterDashboard.totalCandidates')}</p>
                                                         <p className="text-sm text-slate-200 font-title">{recruiter.total_talents || 0}</p>
                                                     </div>
                                                 </div>
 
-                                                <div className="flex items-start gap-3 py-3 border-b border-white/10 last:border-b-0">
-                                                    <Wallet className="h-4 w-4 text-slate-400 mt-0.5 shrink-0" />
+                                                <div className="flex items-start gap-3 rounded-xl border border-white/10 px-3 py-3 transition-colors hover:bg-blue-500/10">
+                                                    <Wallet className="mt-0.5 h-5 w-5 shrink-0 text-blue-300" />
                                                     <div className="flex-1 min-w-0">
                                                         <p className="text-xs uppercase text-slate-500 font-semibold font-body">{t('recruiterDashboard.walletLabel')}</p>
                                                         <div className="flex items-center gap-2">
-                                                            <p className="text-sm text-slate-200 font-body font-mono truncate">
+                                                            <p className="truncate text-sm text-slate-200 font-body font-mono">
                                                                 {recruiter.wallet_address.slice(0, 6)}…{recruiter.wallet_address.slice(-4)}
                                                             </p>
                                                             <button
@@ -238,6 +238,14 @@ const RecruiterDashboard = () => {
                                                         </div>
                                                     </Link>
                                                 )}
+
+                                                <Link to="/recruiter/vacancies" className="flex items-center gap-3 rounded-xl border border-white/10 px-3 py-3 transition-colors hover:bg-blue-500/10">
+                                                    <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-blue-300" />
+                                                    <div className="flex-1 min-w-0">
+                                                        <p className="text-xs uppercase text-slate-500 font-semibold font-body">{t('recruiterDashboard.Jobs')}</p>
+                                                        <p className="text-sm text-slate-200 font-title">{t('recruiterDashboard.Vacancies')}</p>
+                                                    </div>
+                                                </Link>
 
                                                 <div className="pt-4 border-t border-white/10">
                                                     <Button

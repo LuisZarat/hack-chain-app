@@ -311,6 +311,8 @@
     "totalCandidates": "Total de Candidatos",
     "talentsAvailable": "Talentos en la Plataforma",
     "walletLabel": "WALLET",
+    "Jobs" : "Empleos",
+    "Vacancies": "Mis vacantes",
     "logout": "Cerrar sesión",
     "recruiterFallback": "Reclutador",
     "errorLoad": "Error al cargar talentos.",
@@ -1185,5 +1187,147 @@
   "title": "Compartir certificado",
   "shareText": "Mira mi certificado en HackChain",
   "scanCertificate": "Escanea para ver {{name}}"
+},
+"jobTalent": {
+  "shellTitle": "HackChain Empleos",
+  "shellLogoLabel": "HackChain Empleos",
+  "loadingVacancies": "Cargando vacantes",
+  "vacancyClosed": "Vacante cerrada",
+  "closesToday": "Cierra hoy",
+  "daysUntilClosing": "{{count}} días para el cierre",
+  "applications": "{{count}} postulaciones",
+  "loadError": "No pudimos cargar las vacantes.",
+  "tryAgain": "Inténtalo de nuevo.",
+  "retry": "Reintentar",
+  "noResults": "No encontramos vacantes con esos filtros.",
+  "tryDifferentFilters": "Prueba otra área, modalidad o búsqueda.",
+  "companyNotVerified": "Empresa sin verificar",
+  "unverifiedCompanyWarning": "HackChain no comprueba la identidad de las empresas. Nunca envíes dinero ni datos bancarios para postularte.",
+  "back": "Volver",
+  "pageTitle": "Encuentra tu siguiente desafío.",
+  "pageDescription": "Vacantes verificables por contrato, proyectos que buscan talento con criterio.",
+  "filters": {
+    "label": "Filtros de vacantes",
+    "searchLabel": "Buscar puesto o empresa",
+    "searchPlaceholder": "Buscar puesto o empresa",
+    "areaLabel": "Filtrar por área",
+    "allAreas": "Todas las áreas",
+    "modalityLabel": "Filtrar por modalidad",
+    "allModalities": "Todas las modalidades",
+    "clear": "Limpiar filtros"
+  },
+  "loading": "Cargando oportunidades",
+  "open": "{{count}} oportunidades abiertas",
+
+    "aboutPosition": "Sobre la posición",
+    "requirements": "Requisitos",
+    "noLongerAccepts": "Esta vacante ya no acepta postulaciones.",
+    "apply": {
+    "title": "Postularme",
+    "loginMessage": "Inicia sesión como Talento para postularte.",
+    "login": "Iniciar sesión",
+    "talentOnly": "Solo las cuentas de Talento pueden postularse.",
+    "success": "Tu postulación fue enviada correctamente.",
+    "description": "Comparte solo lo que quieras. Los certificados son opcionales.",
+    "noCertificates": "No tienes certificados disponibles para compartir.",
+    "certificateFallback": "Certificado {{identifier}}",
+    "message": "Mensaje",
+    "optional": "opcional",
+    "send": "Enviar postulación",
+    "sending": "Enviando..."
+  },
+  "applicationsPage": {
+  "eyebrow": "Talento / Seguimiento",
+  "title": "Mis postulaciones",
+  "description": "Consulta el estado de cada oportunidad a la que aplicaste.",
+  "exploreOpenVacancies": "Explorar vacantes abiertas",
+  "submittedOn": "Enviada el",
+  "talentOnlyNotice": "Esta sección está disponible para cuentas de Talento.",
+  "status": {
+    "enviada": "Enviada",
+    "vista": "Vista",
+    "contactado": "Contactado",
+    "descartada": "Descartada",
+    "cerrada_sin_respuesta": "Cerrada sin respuesta"
+  }
+}
+
+},
+"vacancyRecruiter": {
+  "applications": "{{count}} postulaciones",
+  "editingVacancy": "Estás editando esta vacante.",
+  "salaryLocked": "Esta vacante ya tiene postulaciones. El salario no puede modificarse.",
+    "fields": {
+    "position": "Puesto",
+    "company": "Empresa",
+    "area": "Área",
+    "modality": "Modalidad",
+    "closingDate": "Cierre",
+    "salaryMin": "Salario mínimo",
+    "salaryMax": "Salario máximo",
+    "currency": "Moneda",
+    "period": "Periodo",
+    "country": "País",
+    "city": "Ciudad",
+    "description": "Descripción",
+    "requirements": "Requisitos"
+  },
+  "requirementsHint": "(uno por línea)",
+  "cancel": "Cancelar",
+  "saving": "Guardando...",
+  "saveChanges": "Guardar cambios",
+  "publish": "Publicar",
+  "backToDashboard": "Volver al dashboard",
+  "eyebrow": "Reclutador / Publicaciones",
+  "title": "Mis vacantes",
+
+  "openVacanciesCount": "{{count}} de 5 abiertas",
+
+  "buttons": {
+    "publish": "Publicar vacante",
+    "publishFirst": "Publicar tu primera vacante",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "closing": "Cerrando..."
+  },
+
+  "limit": {
+    "message": "Alcanzaste el límite de 5 vacantes abiertas. Cierra una para publicar otra."
+  },
+
+  "empty": {
+    "title": "Aún no tienes vacantes",
+    "description": "Publica tu primera vacante para comenzar a recibir postulaciones de talentos."
+  },
+
+  "sections": {
+    "active": "Vacantes activas",
+    "history": "Historial",
+    "closed": "Vacantes cerradas"
+  },
+
+  "errors": {
+    "unexpected": "Ocurrió un error inesperado. Intenta nuevamente."
+  },
+    "applicants": {
+    "backToVacancies": "Mis vacantes",
+    "eyebrow": "RECLUTADOR / TALENTO",
+    "defaultTitle": "Postulantes",
+    "summary": "{{count}} postulantes, ordenados por fecha.",
+    "empty": "Aún no hay postulaciones para esta vacante.",
+    "talentWithoutName": "Talento sin nombre",
+    "viewProfile": "Ver perfil",
+    "reject": "Descartar",
+    "contact": "Contactar",
+    "certificateFallback": "Certificado {{id}}",
+    "applicationStatusUpdated": "Estado de postulación actualizado."
+  },
+  "status": {
+  "enviada": "Enviada",
+  "vista": "Vista",
+  "contactado": "Contactado",
+  "descartada": "Descartada",
+  "cerrada_sin_respuesta": "Cerrada sin respuesta"
+}
 }
 }

@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { Award, Briefcase, Wallet, LogOut, ChevronDown, ChevronRight, ExternalLink, GraduationCap, Users, Mail, Copy, Check, Bell, CheckCircle, XCircle, Flag, CreditCard, AlertTriangle, Video } from 'lucide-react';
+import { Award, Briefcase, ClipboardList, Wallet, LogOut, ChevronDown, ChevronRight, ExternalLink, GraduationCap, Users, Mail, Copy, Check, Bell, CheckCircle, XCircle, Flag, CreditCard, AlertTriangle, Video } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useAdminAccess } from '@/hooks/useAdminAccess';
 import { appKit } from '@/config/walletConfig';
@@ -778,6 +778,26 @@ const TalentDashboard = () => {
                             </div>
                           </Link>
                         )}
+                        <Link
+                          to="/jobs"
+                          className="flex items-start gap-3 rounded-xl border border-purple-500/10 bg-purple-500/5 p-3 transition-colors hover:border-purple-500/20 hover:bg-purple-500/10"
+                        >
+                          <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-fuchsia-300" />
+                          <div>
+                            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-slate-500">Empleos</p>
+                            <p className="text-sm text-slate-200">Explorar vacantes</p>
+                          </div>
+                        </Link>
+                        <Link
+                          to="/my-applications"
+                          className="flex items-start gap-3 rounded-xl border border-purple-500/10 bg-purple-500/5 p-3 transition-colors hover:border-purple-500/20 hover:bg-purple-500/10"
+                        >
+                          <ClipboardList className="mt-0.5 h-5 w-5 shrink-0 text-fuchsia-300" />
+                          <div>
+                            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-slate-500">Seguimiento</p>
+                            <p className="text-sm text-slate-200">Mis postulaciones</p>
+                          </div>
+                        </Link>
                       </div>
 
                       <div className="pt-3 border-t border-purple-500/20 space-y-2">

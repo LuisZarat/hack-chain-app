@@ -96,6 +96,15 @@ async function post<T>(path: string, body?: unknown): Promise<T> {
   }));
 }
 
+async function put<T>(path: string, body?: unknown): Promise<T> {
+  return withAutoRefresh<T>(() => fetch(`${BASE_URL}${path}`, {
+    ...FETCH_OPTS,
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: body ? JSON.stringify(body) : undefined,
+  }));
+}
+
 async function getPublic<T>(path: string): Promise<T> {
   const response = await fetch(`${BASE_URL}${path}`, {
     ...FETCH_OPTS,
@@ -176,6 +185,7 @@ async function registerCertificateShare(certificateId: string): Promise<void> {
 export const api = {
   get,
   post,
+  put,
   patch,
   del,
   postPublic,
