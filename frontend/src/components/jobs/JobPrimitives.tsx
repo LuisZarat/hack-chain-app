@@ -91,7 +91,22 @@ export function VacancyRow({
               ? `/recruiter/vacancies/${vacancy.id}/applicants`
               : `/jobs/${vacancy.slug}`
           }
-          className="group grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto]"
+          //className="group grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto]"
+          className="
+                      group
+                      flex
+                      flex-col
+                      gap-3
+                      border-b
+                      py-5
+                      transition-all
+                      duration-200
+                      hover:bg-white/[0.03]
+                      sm:flex-row
+                      sm:items-center
+                      sm:justify-between
+                      sm:px-3
+                    "
         >
           <div className="min-w-0">
             <div className="flex items-start gap-3">
@@ -103,40 +118,49 @@ export function VacancyRow({
                   color: P.accent,
                 }}
               >
-                <BriefcaseBusiness className="h-5 w-5" />
+                <BriefcaseBusiness className="h-5 w-5 drop-shadow-[0_0_7px_rgba(168,85,247,0.55)]" />
               </div>
 
               <div className="min-w-0">
                 <h3
-                  className="truncate font-title text-lg font-semibold transition-colors group-hover:text-white"
-                  style={{ color: P.textPrimary }}
+                   className="
+    truncate
+    font-title
+    text-lg
+    font-bold
+    transition-colors
+    group-hover:text-white
+  "
+  style={{ color: P.textPrimary }}
                 >
                   {vacancy.position}
                 </h3>
 
                 <p
-                  className="mt-1 flex items-center gap-2 text-sm"
-                  style={{ color: P.textSecondary }}
-                >
-                  <Building2
-                    className="h-4 w-4"
-                    style={{ color: P.textMuted }}
-                  />
-                  {vacancy.company}
-                </p>
+  className="mt-1 flex items-center gap-2 font -body text-sm font-medium"
+  style={{ color: "#FFFFFF" }}
+>
+  <Building2
+    className="h-4 w-4"
+    style={{ color: P.accent }}
+  />
+  {vacancy.company}
+</p>
               </div>
             </div>
 
             <div
-              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:pl-[52px]"
-              style={{ color: P.textMuted }}
+              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2  font-body
+  text-xs
+  font-medium sm:pl-[52px]"
+              style={{ color: "#FFFFFF" }}
             >
               <span>{LABELS[vacancy.modality] ?? vacancy.modality}</span>
 
               <span>{LABELS[vacancy.area] ?? vacancy.area}</span>
 
               {(vacancy.city || vacancy.country) && (
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-1"  style={{ color: P.textSecondary }}>
                   <MapPin className="h-3.5 w-3.5" />
                   {[vacancy.city, vacancy.country]
                     .filter(Boolean)
@@ -146,9 +170,9 @@ export function VacancyRow({
 
               <span
                 className="flex items-center gap-1.5 text-xs"
-                style={{ color: P.textMuted }}
+                style={{ color:"#FFFFFF" }}
               >
-                <Clock3 className="h-3.5 w-3.5" />
+                <Clock3 className="h-3.5 w-3.5" style={{ color: P.accent }}/>
 
                 {vacancy.status === "cerrada"
                   ? t("jobTalent.vacancyClosed")
@@ -175,9 +199,12 @@ export function VacancyRow({
           </div>
 
           <div className="flex items-center justify-between gap-4 text-sm sm:flex-col sm:items-end sm:justify-center">
-            <span className="font-medium" style={{ color: P.accent }}>
-              {formatSalary(vacancy)}
-            </span>
+            <span
+  className=" font-body text-base font-bold "
+  style={{ color: "#C084FC" }}
+>
+  {formatSalary(vacancy)}
+</span>
           </div>
         </Link>
 

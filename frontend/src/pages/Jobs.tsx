@@ -51,8 +51,8 @@ export default function Jobs() {
             text-sm font-medium
             transition-all duration-200
             hover:-translate-x-0.5
+            hover:text-white
           "
-        style={{ color: P.textMuted }}
       >
         <ArrowLeft
           className="
@@ -70,13 +70,21 @@ export default function Jobs() {
       >
         <section className="mb-9 max-w-3xl">
           <h1
-            className="font-title text-4xl font-semibold tracking-tight sm:text-5xl"
-            style={{ color: P.textPrimary }}
+            className="  font-title
+    text-2xl
+    font-bold
+    tracking-tight
+    leading-tight
+    sm:text-3xl
+    md:text-4xl"
+            //style={{ color: P.textPrimary }}
           >
-            {t("jobTalent.pageTitle")}
+            <span className="bg-gradient-to-r from-white to-white bg-clip-text text-transparent ">
+              {t("jobTalent.pageTitle")}
+            </span>
           </h1>
           <p
-            className="mt-4 max-w-xl text-base leading-7"
+            className="mt-4 max-w-xl font-body text-base leading-7"
             style={{ color: P.textSecondary }}
           >
             {t("jobTalent.pageDescription")}

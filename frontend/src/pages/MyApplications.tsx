@@ -14,13 +14,6 @@ import { useMyApplications } from "@/hooks/useVacancyApplications";
 import type { ApplicationStatus } from "@/types/vacancy";
 import { P } from "@/components/profile/palette";
 
-const statusLabels: Record<ApplicationStatus, string> = {
-  enviada: "Enviada",
-  vista: "Vista",
-  contactado: "Contactado",
-  descartada: "Descartada",
-  cerrada_sin_respuesta: "Cerrada sin respuesta",
-};
 const statusColors: Record<ApplicationStatus, string> = {
   enviada: "text-cyan-200",
   vista: "text-blue-200",
@@ -28,13 +21,16 @@ const statusColors: Record<ApplicationStatus, string> = {
   descartada: "text-red-300",
   cerrada_sin_respuesta: "text-slate-400",
 };
+
 export default function MyApplications() {
   const prefersReduced = useReducedMotion();
   const { user } = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
+
   const { data, isPending, isError, refetch } = useMyApplications();
   const applications = data?.applications ?? [];
+
   return (
     <JobShell>
       <motion.div
@@ -42,40 +38,60 @@ export default function MyApplications() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
+        {/* Volver */}
         <button
           type="button"
           onClick={() => navigate(-1)}
           className="
-                    group mb-7 inline-flex items-center gap-2
-                    text-sm font-medium
-                    transition-all duration-200
-                    hover:-translate-x-0.5
-                  "
+            group
+            mb-7
+            inline-flex
+            items-center
+            gap-2
+            font-body
+            text-sm
+            font-medium
+            transition-all
+            duration-200
+            hover:-translate-x-0.5
+            hover:text-white
+          "
           style={{ color: P.textMuted }}
         >
           <ArrowLeft
             className="
-                      h-4 w-4
-                      transition-transform duration-200
-                      group-hover:-translate-x-0.5
-                    "
+              h-4 w-4
+              transition-transform
+              duration-200
+              group-hover:-translate-x-0.5
+            "
           />
+
           {t("jobTalent.back")}
         </button>
+
+        {/* Encabezado */}
         <header className="mb-8">
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.2em]"
+            className="
+              font-body
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.22em]
+            "
             style={{ color: P.accent }}
           >
             {t("jobTalent.applicationsPage.eyebrow")}
           </p>
+
           <h1
             className="
               mt-3
               font-title
               text-4xl
-              font-semibold
-              leading-none
+              font-bold
+              leading-tight
               tracking-tight
               sm:text-5xl
             "
@@ -83,13 +99,22 @@ export default function MyApplications() {
           >
             {t("jobTalent.applicationsPage.title")}
           </h1>
+
           <p
-            className="mt-4 max-w-xl text-base leading-7"
+            className="
+              mt-4
+              max-w-xl
+              font-body
+              text-base
+              leading-7
+            "
             style={{ color: P.textSecondary }}
           >
             {t("jobTalent.applicationsPage.description")}
           </p>
         </header>
+
+        {/* Estados */}
         {isPending ? (
           <JobsSkeleton count={4} />
         ) : isError ? (
@@ -99,11 +124,22 @@ export default function MyApplications() {
             action={
               <Link
                 to="/jobs"
-                className="mt-5 text-sm"
+                className="
+                  mt-5
+                  inline-flex
+                  items-center
+                  gap-1
+                  font-body
+                  text-sm
+                  font-medium
+                  transition-colors
+                  hover:text-white
+                "
                 style={{ color: P.accent }}
               >
-                {t("jobTalent.applicationsPage.exploreOpenVacancies")}{" "}
-                <ArrowUpRight className="inline h-4 w-4" />
+                {t("jobTalent.applicationsPage.exploreOpenVacancies")}
+
+                <ArrowUpRight className="h-4 w-4" />
               </Link>
             }
           />
@@ -132,38 +168,64 @@ export default function MyApplications() {
                     "
                     style={{ borderColor: P.borderSub }}
                   >
-                    <div>
+                    {/* Información de la vacante */}
+                    <div className="min-w-0">
                       <h2
                         className="
+                          truncate
                           font-title
                           text-lg
+                          font-bold
                           transition-colors
                           duration-200
                           group-hover:text-purple-200
-  "
+                        "
                         style={{ color: P.textPrimary }}
                       >
                         {application.vacancy.position}
                       </h2>
+
                       <p
-                        className="mt-1 text-sm"
+                        className="
+                          mt-1
+                          font-body
+                          text-sm
+                          font-medium
+                        "
                         style={{ color: P.textSecondary }}
                       >
                         {application.vacancy.company}
                       </p>
+
                       <p
-                        className="mt-3 flex items-center gap-2 text-xs"
+                        className="
+                          mt-3
+                          flex
+                          items-center
+                          gap-2
+                          font-body
+                          text-xs
+                          font-medium
+                        "
                         style={{ color: P.textMuted }}
                       >
                         <Clock3 className="h-3.5 w-3.5" />
+
                         {t("jobTalent.applicationsPage.submittedOn")}{" "}
-                        {new Date(application.submitted_at).toLocaleDateString(
-                          "es-MX",
-                        )}
+                        {new Date(
+                          application.submitted_at,
+                        ).toLocaleDateString("es-MX")}
                       </p>
                     </div>
+
+                    {/* Estado */}
                     <span
-                      className={`text-sm font-medium ${statusColors[application.status]}`}
+                      className={`
+                        font-body
+                        text-sm
+                        font-bold
+                        ${statusColors[application.status]}
+                      `}
                     >
                       {t(
                         `jobTalent.applicationsPage.status.${application.status}`,
@@ -174,8 +236,18 @@ export default function MyApplications() {
             )}
           </div>
         )}
+
+        {/* Aviso para usuarios que no son talento */}
         {user?.role !== "student" && (
-          <p className="mt-8 text-sm" style={{ color: P.textMuted }}>
+          <p
+            className="
+              mt-8
+              font-body
+              text-sm
+              font-medium
+            "
+            style={{ color: P.textMuted }}
+          >
             {t("jobTalent.applicationsPage.talentOnlyNotice")}
           </p>
         )}

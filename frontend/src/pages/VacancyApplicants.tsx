@@ -24,56 +24,97 @@ import type { SharedCertificate } from "@/types/vacancy";
 export default function VacancyApplicants() {
   const { id } = useParams();
   const { t } = useTranslation();
+
   const { data, isPending, isError, refetch } = useVacancyApplications(id);
   const update = useUpdateApplicationStatus(id);
+
   if (isPending)
     return (
       <JobShell>
         <JobsSkeleton count={4} />
       </JobShell>
     );
+
   if (isError || !data)
     return (
       <JobShell>
         <JobsError onRetry={() => void refetch()} />
       </JobShell>
     );
+
   return (
     <JobShell>
       <Link
         to="/recruiter/vacancies"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white"
+        className="
+          mb-8
+          inline-flex
+          items-center
+          gap-2
+          font-body
+          text-sm
+          font-medium
+          text-slate-400
+          transition-colors
+          hover:text-white
+        "
       >
         <ArrowLeft className="h-4 w-4" />
         {t("vacancyRecruiter.applicants.backToVacancies")}
       </Link>
+
       <header className="mb-8">
-        <p className="text-xs tracking-[0.24em] text-cyan-300">
+        <p
+          className="
+            font-body
+            text-[10px]
+            font-bold
+            uppercase
+            tracking-[0.22em]
+          "
+          style={{ color: P.accent }}
+        >
           {t("vacancyRecruiter.applicants.eyebrow")}
         </p>
+
         <h1
           className="
-    mt-3
-    font-title
-    text-4xl
-    font-semibold
-    leading-none
-    tracking-tight
-    sm:text-5xl
-  "
+            mt-3
+            font-title
+            text-4xl
+            font-bold
+            leading-tight
+            tracking-tight
+            sm:text-5xl
+          "
           style={{ color: P.textPrimary }}
         >
           {data.vacancy?.position ??
             t("vacancyRecruiter.applicants.defaultTitle")}
         </h1>
-        <p className="mt-3 text-slate-400">
+
+        <p
+          className="mt-3 font-body text-sm font-medium"
+          style={{ color: P.textSecondary }}
+        >
           {t("vacancyRecruiter.applicants.summary", {
             count: data.applications.length,
           })}
         </p>
       </header>
+
       {data.applications.length === 0 ? (
-        <div className="border-b border-white/10 py-16 text-slate-400">
+        <div
+          className="
+            border-b
+            border-white/10
+            py-16
+            font-body
+            text-sm
+            leading-6
+          "
+          style={{ color: P.textSecondary }}
+        >
           {t("vacancyRecruiter.applicants.empty")}
         </div>
       ) : (
@@ -85,20 +126,49 @@ export default function VacancyApplicants() {
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h2 className="flex items-center gap-2 font-title text-xl text-white">
-                    <UserRound className="h-5 w-5 text-cyan-300" />
+                  <h2
+                    className="
+                      flex
+                      items-center
+                      gap-2
+                      font-title
+                      text-xl
+                      font-bold
+                      tracking-tight
+                    "
+                    style={{ color: P.textPrimary }}
+                  >
+                    <UserRound
+                      className="h-5 w-5"
+                      style={{ color: P.accent }}
+                    />
+
                     {application.student_name ??
                       t("vacancyRecruiter.applicants.talentWithoutName")}
                   </h2>
-                  <p className="mt-2 text-xs text-slate-500">
-                    {new Date(application.submitted_at).toLocaleString("es-MX")}{" "}
+
+                  <p
+                    className="
+                      mt-2
+                      font-body
+                      text-xs
+                      font-medium
+                    "
+                    style={{ color: P.textMuted }}
+                  >
+                    {new Date(application.submitted_at).toLocaleString(
+                      "es-MX",
+                    )}{" "}
                     ·{" "}
-                    <span className="text-cyan-200">
-                      {t(`vacancyRecruiter.status.${application.status}`)}
+                    <span style={{ color: "#C084FC" }}>
+                      {t(
+                        `vacancyRecruiter.status.${application.status}`,
+                      )}
                     </span>
                   </p>
                 </div>
-                <div className="flex gap-2">
+
+                <div className="flex flex-wrap gap-2">
                   <Link
                     to={`/recruiter/talent/${application.student_wallet_address}`}
                   >
@@ -111,6 +181,7 @@ export default function VacancyApplicants() {
                         rounded-lg
                         border
                         px-3.5
+                        font-body
                         text-xs
                         font-medium
                         transition-all
@@ -126,9 +197,13 @@ export default function VacancyApplicants() {
                       }}
                     >
                       <UserRound className="h-3.5 w-3.5" />
-                      {t("vacancyRecruiter.applicants.viewProfile")}
+
+                      {t(
+                        "vacancyRecruiter.applicants.viewProfile",
+                      )}
                     </Button>
                   </Link>
+
                   {application.status !== "descartada" && (
                     <Button
                       size="sm"
@@ -140,6 +215,7 @@ export default function VacancyApplicants() {
                         border-red-400/25
                         bg-transparent
                         px-3.5
+                        font-body
                         text-xs
                         font-medium
                         text-red-300
@@ -159,9 +235,13 @@ export default function VacancyApplicants() {
                       }
                     >
                       <XCircle className="h-3.5 w-3.5" />
-                      {t("vacancyRecruiter.applicants.reject")}
+
+                      {t(
+                        "vacancyRecruiter.applicants.reject",
+                      )}
                     </Button>
                   )}
+
                   {application.status !== "contactado" &&
                     application.status !== "descartada" && (
                       <Button
@@ -174,6 +254,7 @@ export default function VacancyApplicants() {
                           border-purple-400/25
                           bg-transparent
                           px-3.5
+                          font-body
                           text-xs
                           font-medium
                           text-purple-300
@@ -193,16 +274,33 @@ export default function VacancyApplicants() {
                         }
                       >
                         <MessageSquare className="h-3.5 w-3.5" />
-                        {t("vacancyRecruiter.applicants.contact")}
+
+                        {t(
+                          "vacancyRecruiter.applicants.contact",
+                        )}
                       </Button>
                     )}
                 </div>
               </div>
+
               {application.message && (
-                <p className="mt-5 border-l-2 border-cyan-300/30 pl-4 text-sm italic text-slate-300">
+                <p
+                  className="
+                    mt-5
+                    border-l-2
+                    border-cyan-300/30
+                    pl-4
+                    font-body
+                    text-sm
+                    italic
+                    leading-6
+                  "
+                  style={{ color: P.textSecondary }}
+                >
                   {application.message}
                 </p>
               )}
+
               <div className="mt-5 flex flex-wrap gap-3">
                 {(application.shared_certificates as SharedCertificate[]).map(
                   (certificate) => (
@@ -211,13 +309,31 @@ export default function VacancyApplicants() {
                       href={certificate.chain_verification_url ?? "#"}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 border border-white/10 px-3 py-2 text-xs text-cyan-100 hover:border-cyan-300/50"
+                      className="
+                        inline-flex
+                        items-center
+                        gap-2
+                        border
+                        border-white/10
+                        px-3
+                        py-2
+                        font-body
+                        text-xs
+                        font-medium
+                        text-cyan-100
+                        transition-colors
+                        hover:border-cyan-300/50
+                      "
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
+
                       {certificate.title ??
-                        t("vacancyRecruiter.applicants.certificateFallback", {
-                          id: certificate.token_id,
-                        })}
+                        t(
+                          "vacancyRecruiter.applicants.certificateFallback",
+                          {
+                            id: certificate.token_id,
+                          },
+                        )}
                     </a>
                   ),
                 )}
@@ -226,9 +342,12 @@ export default function VacancyApplicants() {
           ))}
         </div>
       )}
+
       {update.isSuccess && (
         <SuccessMessage>
-          {t("vacancyRecruiter.applicants.applicationStatusUpdated")}
+          {t(
+            "vacancyRecruiter.applicants.applicationStatusUpdated",
+          )}
         </SuccessMessage>
       )}
     </JobShell>

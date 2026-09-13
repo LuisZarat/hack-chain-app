@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/Layout";
+import { GrainOverlay } from "@/components/profile/GrainOverlay";
 import { P } from "@/components/profile/palette";
 
 const HackChainLogo = "/images/logoHackchain2.webp";
@@ -19,6 +20,25 @@ export function JobShell({
 
   return (
     <Layout>
+      <div
+      className="relative min-h-screen font-body overflow-hidden"
+      style={{
+        backgroundColor: "oklch(0.11 0.012 280)",
+        color: P.textPrimary,
+      }}
+    >
+      {/* Glow superior igual al perfil */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0"
+        style={{
+          transform: "translateX(-50%)",
+          width: "900px",
+          height: "500px",
+          background:
+            "radial-gradient(at 50% 0%, oklch(0.7 0.16 280 / 0.1) 0%, transparent 65%)",
+        }}
+      />
       <main
         className="
           mx-auto
@@ -94,6 +114,7 @@ export function JobShell({
 
         {children}
       </main>
+      </div>
     </Layout>
   );
 }

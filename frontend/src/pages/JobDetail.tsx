@@ -78,8 +78,8 @@ export default function JobDetail() {
                     text-sm font-medium
                     transition-all duration-200
                     hover:-translate-x-0.5
-                  "
-                  style={{ color: P.textMuted }}
+                    hover:text-white
+                  "   
                 >
                   <ArrowLeft
                     className="
@@ -97,24 +97,48 @@ export default function JobDetail() {
               style={{ borderColor: P.borderSub }}
             >
               <p
-                className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em]"
-                style={{ color: P.accent }}
+                  className="
+    mb-3
+    font-body
+    text-[10px]
+    font-bold
+    uppercase
+    tracking-[0.22em]
+  "
+  style={{ color: P.accent }}
               >
                 {LABELS[vacancy.area]} / {LABELS[vacancy.modality]}
               </p>
               <h1
-                className="font-title text-4xl font-semibold sm:text-5xl"
-                style={{ color: P.textPrimary }}
-              >
-                {vacancy.position}
-              </h1>
-              <p className="mt-3 text-lg" style={{ color: P.textSecondary }}>
+  className="
+    font-title
+    text-4xl
+    font-bold
+    tracking-tight
+    leading-tight
+    sm:text-5xl
+  "
+  style={{ color: P.textPrimary }}
+>
+  {vacancy.position}
+</h1>
+              <p  className="mt-2 font-body text-base font-medium"
+  style={{ color: P.textSecondary }}>
                 {vacancy.company}
               </p>
               <div
-                className="mt-5 flex flex-wrap gap-4 text-sm"
-                style={{ color: P.textMuted }}
-              >
+  className="
+    mt-5
+    flex
+    flex-wrap
+    gap-x-5
+    gap-y-2
+    font-body
+    text-sm
+    font-medium
+  "
+  style={{ color: P.textSecondary }}
+>
                 <span className="flex items-center gap-2">
                   <Clock3 className="h-4 w-4" />
                   {closed ? t("jobTalent.vacancyClosed") : t("jobTalent.daysUntilClosing", { count: days })}
@@ -128,12 +152,50 @@ export default function JobDetail() {
                 <span style={{ color: P.accent }}>{formatSalary(vacancy)}</span>
               </div>
             </div>
-            <UnverifiedNotice>
-              {data.unverified_company_notice}
-            </UnverifiedNotice>
+<div
+  className="mt-7 rounded-xl border px-5 py-4"
+  style={{
+    backgroundColor: "oklch(0.135 0.014 280)",
+    borderColor: "oklch(0.25 0.02 280)",
+  }}
+>
+  <div className="flex gap-4">
+    {/* Indicador */}
+    <div
+      className="mt-0.5 h-9 w-1 shrink-0 rounded-full"
+      style={{
+        background:
+          "linear-gradient(to bottom, #a855f7, rgba(168, 85, 247, 0.25))",
+      }}
+    />
+
+    <div className="min-w-0">
+      <div className="flex items-center gap-2">
+        <ShieldAlert
+          className="h-4 w-4 shrink-0"
+          style={{ color: "#C084FC" }}
+        />
+
+        <p
+          className=" font-body text-sm font-bold"
+          style={{ color: P.textPrimary }}
+        >
+          {t("jobTalent.companyNotVerified")}
+        </p>
+      </div>
+
+      <p
+        className="mt-3 font-body text-sm leading-6"
+        style={{ color: P.textSecondary }}
+      >
+        {data.unverified_company_notice}
+      </p>
+    </div>
+  </div>
+</div>
             <div className="mt-10">
               <h2
-                className="font-title text-2xl"
+                className="font-title text-2xl font-bold tracking-tight"
                 style={{ color: P.textPrimary }}
               >
                 {t("jobTalent.aboutPosition")}
@@ -147,7 +209,7 @@ export default function JobDetail() {
             </div>
             <div className="mt-10">
               <h2
-                className="font-title text-2xl"
+                className="font-title text-2xl font-bold tracking-tight"
                 style={{ color: P.textPrimary }}
               >
                {t("jobTalent.requirements")}
@@ -276,7 +338,7 @@ export function ApplyPanel({
   />
 
   <h2
-    className="font-title text-2xl font-semibold tracking-tight"
+    className="font-title text-2xl font-bold tracking-tight"
     style={{ color: P.textPrimary }}
   >
     {t("jobTalent.apply.title")}
@@ -339,37 +401,43 @@ export function ApplyPanel({
         </p>
       )}
       <Button
-        className="
-          mt-5
-          min-h-11
-          w-full
-          gap-2
-          rounded-xl
-          bg-gradient-to-r
-          from-fuchsia-500
-          to-purple-600
-          text-sm
-          font-semibold
-          text-white
-          shadow-[0_0_12px_rgba(168,85,247,0.12)]
-          transition-[transform,box-shadow,opacity]
-          duration-200
-          hover:from-fuchsia-600
-          hover:to-purple-700
-          hover:shadow-[0_0_18px_rgba(168,85,247,0.22)]
-          active:scale-[0.98]
-          disabled:opacity-50
-          [&_svg]:size-4
-          [&_svg]:text-white
-        "
-        disabled={busy}
-        onClick={onSubmit}
-      >
-        <Send className="h-4 w-4" />
-        {busy
-          ? t("jobTalent.apply.sending")
-          : t("jobTalent.apply.send")}
-      </Button>
+  className="
+    mt-5
+    ml-auto
+    inline-flex
+    h-10
+    w-full
+    items-center
+    justify-center
+    gap-2
+    rounded-full
+    bg-primary
+    px-7
+    py-2
+    text-sm
+    font-semibold
+    text-primary-foreground
+    ring-offset-background
+    transition-all
+    hover:scale-[1.015]
+    hover:bg-primary/90
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-ring
+    focus-visible:ring-offset-2
+    active:scale-[0.98]
+    disabled:pointer-events-none
+    disabled:opacity-50
+    disabled:hover:scale-100
+  "
+  disabled={busy}
+  onClick={onSubmit}
+>
+  <Send className="h-4 w-4" />
+  {busy
+    ? t("jobTalent.apply.sending")
+    : t("jobTalent.apply.send")}
+</Button>
     </div>
   );
 }

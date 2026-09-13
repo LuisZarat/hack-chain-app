@@ -1273,7 +1273,7 @@
     "requirements": "Requirements"
   },
   "requirementsHint": "(one per line)",
-      "cancel": "Cancel",
+    "cancel": "Cancel",
     "saving": "Saving...",
     "saveChanges": "Save changes",
     "publish": "Publish",
