@@ -37,7 +37,7 @@ vi.mock("react-i18next", () => ({
           options?.count ?? 0
         } días para el cierre`,
         "jobTalent.companyNotVerified": "Empresa sin verificar",
-        "jobTalent.unverifiedCompanyWarning": "No envíes dinero.",
+        "jobTalent.unverifiedCompanyWarning": "HackChain no comprueba la identidad de las empresas. Nunca envíes dinero ni datos bancarios para postularte.",
         "vacancyRecruiter.applications": `${options?.count ?? 0} postulaciones`,
         "jobTalent.labels.remoto": "Remoto",
         "jobTalent.labels.frontend": "Frontend",
@@ -308,14 +308,22 @@ describe("EmptyJobs", () => {
     ).toBeInTheDocument();
   });
 });
-
 describe("UnverifiedNotice", () => {
-  it("renders the default warning", () => {
-    render(<UnverifiedNotice />);
+  it("renders warning content", () => {
+    render(
+      <UnverifiedNotice>
+        HackChain no comprueba la identidad de las empresas. Nunca envíes dinero
+        ni datos bancarios para postularte.
+      </UnverifiedNotice>,
+    );
 
     expect(screen.getByText("Empresa sin verificar")).toBeInTheDocument();
 
-    expect(screen.getByText("No envíes dinero.")).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "HackChain no comprueba la identidad de las empresas. Nunca envíes dinero ni datos bancarios para postularte.",
+      ),
+    ).toBeInTheDocument();
   });
 
   it("renders custom warning content", () => {
@@ -333,7 +341,11 @@ describe("UnverifiedNotice", () => {
 
     expect(screen.getByText("Empresa sin verificar")).toBeInTheDocument();
 
-    expect(screen.queryByText("No envíes dinero.")).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(
+        "HackChain no comprueba la identidad de las empresas. Nunca envíes dinero ni datos bancarios para postularte.",
+      ),
+    ).not.toBeInTheDocument();
   });
 });
 

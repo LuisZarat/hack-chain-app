@@ -34,6 +34,7 @@ export default function JobDetail() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const vacancy = data?.vacancy;
+  const unverifiedCompanyNotice = data?.unverified_company_notice;
   const isTalent = user?.role === "student";
   const { data: certificates = [] } = useTalentCertificates(
     isTalent ? (user?.walletAddress ?? undefined) : undefined,
@@ -152,47 +153,11 @@ export default function JobDetail() {
                 <span style={{ color: P.accent }}>{formatSalary(vacancy)}</span>
               </div>
             </div>
-<div
-  className="mt-7 rounded-xl border px-5 py-4"
-  style={{
-    backgroundColor: "oklch(0.135 0.014 280)",
-    borderColor: "oklch(0.25 0.02 280)",
-  }}
->
-  <div className="flex gap-4">
-    {/* Indicador */}
-    <div
-      className="mt-0.5 h-9 w-1 shrink-0 rounded-full"
-      style={{
-        background:
-          "linear-gradient(to bottom, #a855f7, rgba(168, 85, 247, 0.25))",
-      }}
-    />
-
-    <div className="min-w-0">
-      <div className="flex items-center gap-2">
-        <ShieldAlert
-          className="h-4 w-4 shrink-0"
-          style={{ color: "#C084FC" }}
-        />
-
-        <p
-          className=" font-body text-sm font-bold"
-          style={{ color: P.textPrimary }}
-        >
-          {t("jobTalent.companyNotVerified")}
-        </p>
-      </div>
-
-      <p
-        className="mt-3 font-body text-sm leading-6"
-        style={{ color: P.textSecondary }}
-      >
-        {data.unverified_company_notice}
-      </p>
-    </div>
-  </div>
-</div>
+            {unverifiedCompanyNotice && (
+              <UnverifiedNotice>
+                {unverifiedCompanyNotice}
+              </UnverifiedNotice>
+            )}
             <div className="mt-10">
               <h2
                 className="font-title text-2xl font-bold tracking-tight"

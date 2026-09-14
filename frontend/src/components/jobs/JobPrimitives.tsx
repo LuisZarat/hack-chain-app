@@ -331,37 +331,53 @@ export function EmptyJobs({ action }: { action?: React.ReactNode }) {
 export function UnverifiedNotice({
   children,
 }: {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }) {
   const { t } = useTranslation();
 
   return (
+        <div
+  className="mt-7 rounded-xl border px-5 py-4"
+  style={{
+    backgroundColor: "oklch(0.135 0.014 280)",
+    borderColor: "oklch(0.25 0.02 280)",
+  }}
+>
+  <div className="flex gap-4">
+    {/* Indicador */}
     <div
-      className="flex gap-3 rounded-xl border p-4 text-sm"
+      className="mt-0.5 h-9 w-1 shrink-0 rounded-full"
       style={{
-        borderColor: "oklch(0.78 0.14 75 / 0.3)",
-        backgroundColor: P.amberSoft,
-        color: P.textPrimary,
+        background:
+          "linear-gradient(to bottom, #a855f7, rgba(168, 85, 247, 0.25))",
       }}
-    >
-      <ShieldAlert
-        className="mt-0.5 h-5 w-5 shrink-0"
-        style={{ color: P.amber }}
-      />
+    />
 
-      <div>
-        <p className="font-semibold">
-          {t("jobTalent.companyNotVerified")}
-        </p>
+    <div className="min-w-0">
+      <div className="flex items-center gap-2">
+        <ShieldAlert
+          className="h-4 w-4 shrink-0"
+          style={{ color: "#C084FC" }}
+        />
 
         <p
-          className="mt-1"
-          style={{ color: P.textSecondary }}
+          className=" font-body text-sm font-bold"
+          style={{ color: P.textPrimary }}
         >
-          {children ?? t("jobTalent.unverifiedCompanyWarning")}
+          {t("jobTalent.companyNotVerified")}
         </p>
       </div>
+
+      <p
+        className="mt-3 font-body text-sm leading-6"
+        style={{ color: P.textSecondary }}
+      >
+        {children}
+      </p>
     </div>
+  </div>
+</div>
+
   );
 }
 
