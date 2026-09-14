@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import SectionDivider from '@/components/SectionDivider';
 
 const FeatureBlocks = () => {
   const { t } = useTranslation();
@@ -71,11 +72,17 @@ const FeatureBlocks = () => {
   };
 
   return (
-    <section id="certificates" className="pt-12 sm:pt-20 pb-32 md:pb-48 relative">
+    <section id="certificates" className="pt-20 sm:pt-28 pb-32 md:pb-48 relative snap-start snap-always">
+      {/* Section-tinted scrim over the global mosaic — purple accent */}
+      <div className="absolute inset-0 -z-10 bg-[#180528]/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#8B11D1]/[0.06] via-transparent to-transparent" />
+
+      <SectionDivider position="top" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
-          className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start text-left mb-10 md:mb-14"
+          className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start text-left mb-10 md:mb-14 mt-8 md:mt-14"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -85,12 +92,7 @@ const FeatureBlocks = () => {
             <span className="block">{t('features.title1')}</span>
             <span className="block gradient-text whitespace-nowrap">{t('features.title2')}</span>
           </h2>
-
-          <div className="flex justify-start lg:justify-end">
-            <p className="font-body text-lg md:text-xl text-white/55 w-full max-w-sm font-medium lg:translate-x-12">
-              {t('features.subTitle')}
-            </p>
-          </div>
+          
         </motion.div>
 
         <motion.div

@@ -2,12 +2,13 @@ import type { Config } from "tailwindcss";
 
 export default {
 	darkMode: ["class"],
-	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
-	],
+content: [
+    "./index.html",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+],
 	prefix: "",
 	theme: {
 		container: {
@@ -19,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				title: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-				body: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+				title: ['Exo', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+				body: ['Lato', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
 			},
 			transitionTimingFunction: {
 				'menu-icon': 'cubic-bezier(0.68, -0.55, 0.26, 1.55)',
@@ -86,28 +87,30 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
-				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
-			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+keyframes: {
+    'accordion-down': {
+        from: { height: '0' },
+        to: { height: 'var(--radix-accordion-content-height)' }
+    },
+    'accordion-up': {
+        from: { height: 'var(--radix-accordion-content-height)' },
+        to: { height: '0' }
+    },
+    'divider-flow': {
+        '0%': { backgroundPosition: '0% 0%' },
+        '100%': { backgroundPosition: '200% 0%' }
+    },
+    'diamond-pulse': {
+        '0%, 100%': { opacity: '0.6', transform: 'rotate(45deg) scale(1)' },
+        '50%': { opacity: '1', transform: 'rotate(45deg) scale(1.3)' }
+    }
+},
+animation: {
+    'accordion-down': 'accordion-down 0.2s ease-out',
+    'accordion-up': 'accordion-up 0.2s ease-out',
+    'divider-flow': 'divider-flow 4s linear infinite',
+    'diamond-pulse': 'diamond-pulse 1.6s ease-in-out infinite'
+}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

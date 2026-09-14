@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import SectionDivider from '@/components/SectionDivider';
 
 const CallToAction = () => {
   const { t } = useTranslation();
@@ -12,8 +13,13 @@ const CallToAction = () => {
   ];
 
   return (
-    <section id="dao" className="pb-32 md:pb-48 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<section id="dao" className="pt-8 pb-20 md:pb-32 relative snap-start snap-always">      {/* Section-tinted scrim over the global mosaic — denser, for legibility of large stat numbers */}
+      <div className="absolute inset-0 -z-10 bg-[#180528]/75" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#F743EE]/[0.05] via-transparent to-transparent" />
+
+      <SectionDivider position="top" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16 md:mt-24">
 
         <motion.h2
           className="font-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-10 leading-[1.02] tracking-tight"
@@ -61,12 +67,12 @@ const CallToAction = () => {
                 },
               }}
             >
-              <div className="font-title text-5xl md:text-6xl lg:text-7xl font-black gradient-text mb-3 tracking-tight leading-none">
-                {stat.title}
-              </div>
               <div className="font-body text-sm md:text-base text-white/50 font-semibold uppercase tracking-[0.18em]">
                 {stat.subtitle}
               </div>
+              <div className="font-title text-5xl md:text-6xl lg:text-7xl font-black gradient-text mb-3 tracking-tight leading-none">
+                {stat.title}
+              </div>              
             </motion.div>
           ))}
         </motion.div>

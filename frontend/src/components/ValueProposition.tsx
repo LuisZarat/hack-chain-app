@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import SectionDivider from '@/components/SectionDivider';
 
 const ValueProposition = () => {
   const { t } = useTranslation();
@@ -19,7 +20,6 @@ const ValueProposition = () => {
       alt: 'Talent',
       title: t('valueProp.step1Title'),
       desc: t('valueProp.step1Desc'),
-      tags: [t('valueProp.step1Tag1'), t('valueProp.step1Tag2'), t('valueProp.step1Tag3')],
       claySrc: 'from-purple-500/80 via-fuchsia-500/65 to-purple-700/50',
       shadow: 'shadow-clay-purple',
     },
@@ -28,7 +28,6 @@ const ValueProposition = () => {
       alt: 'Educator',
       title: t('valueProp.step2Title'),
       desc: t('valueProp.step2Desc'),
-      tags: [t('valueProp.step2Tag1'), t('valueProp.step2Tag2'), t('valueProp.step2Tag3')],
       claySrc: 'from-cyan-400/80 via-sky-500/65 to-blue-700/50',
       shadow: 'shadow-clay-cyan',
     },
@@ -37,15 +36,20 @@ const ValueProposition = () => {
       alt: 'Recruiter',
       title: t('valueProp.step3Title'),
       desc: t('valueProp.step3Desc'),
-      tags: [t('valueProp.step3Tag1'), t('valueProp.step3Tag2'), t('valueProp.step3Tag3')],
       claySrc: 'from-emerald-400/80 via-green-500/65 to-emerald-700/50',
       shadow: 'shadow-clay-emerald',
     },
   ];
 
   return (
-    <section id="community" className="pb-32 md:pb-48 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={sectionRef}>
+<section id="community" className="pt-8 pb-20 md:pb-32 relative snap-start snap-always">
+        {/* Section-tinted scrim over the global mosaic — teal accent */}
+      <div className="absolute inset-0 -z-10 bg-[#180528]/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#4BC6B9]/[0.06] via-transparent to-transparent" />
+
+      <SectionDivider position="top" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 md:mt-24" ref={sectionRef}>
 
         <motion.div
           className="text-center mb-24 md:mb-32"
@@ -148,20 +152,9 @@ const ValueProposition = () => {
                   {step.title}
                 </h3>
 
-                <p className="font-body text-base md:text-lg text-white/55 leading-relaxed font-medium max-w-xs mb-5">
+                <p className="font-body text-base md:text-lg text-white/55 leading-relaxed font-medium max-w-xs">
                   {step.desc}
                 </p>
-
-                <div className="flex flex-wrap justify-center gap-2">
-                  {step.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-body text-xs uppercase tracking-[0.1em] text-white/50 font-semibold px-3 py-1 rounded-full border border-white/10 bg-white/[0.03]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </motion.div>
             ))}
           </div>

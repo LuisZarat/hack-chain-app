@@ -13,58 +13,48 @@
     "title1": "Estudia",
     "title2": "Enseña",
     "title3": "Emplea",
-    "subTitle1": "Talentos, Educadores y Reclutadores\nen un ecosistema académico-laboral único."  },
+    "subTitle1": "Talentos, Educadores y Reclutadores\nen un ecosistema académico-laboral único."},
   "valueProp": {
     "title1": "Cómo ",
     "title2": "Funciona",
-    "subTitle": "Desde el aprendizaje hasta el empleo — tu viaje dentro del ecosistema HackChain",
+    "subTitle": "Desde el estudio hasta el empleo, HackChain te ayuda a conseguirlo.",
     "step1Title": "Talento",
-    "step1Desc": "Completa cursos profesionales y aprueba evaluaciones rigurosas en tu campo de especialización",
-    "step1Tag1": "Aprender",
-    "step1Tag2": "Calificar",
-    "step1Tag3": "Postularse",
+    "step1Desc": "Estudia cualquier tema y obtén tu certificado",
     "step2Title": "Educador",
-    "step2Desc": "Comparte tu conocimiento, emite certificados verificados y ayuda a formar a la próxima generación de profesionales",
-    "step2Tag1": "Enseñar",
-    "step2Tag2": "Calificar",
-    "step2Tag3": "Recomendar",
+    "step2Desc": "Imparte clases de lo que gustes y sé recompensado",
     "step3Title": "Reclutador",
-    "step3Desc": "Verifica credenciales al instante y contrata a los mejores talentos certificados",
-    "step3Tag1": "Consultar",
-    "step3Tag2": "Calificar",
-    "step3Tag3": "Emplear",
-    "trust1": "A prueba de manipulaciones",
-    "trust2": "Verificación instantánea",
-    "trust3": "Reconocimiento global"
+    "step3Desc": "Encuentra a tu candidato ideal y contrátalo",
+    "trust1": "Accesible",
+    "trust2": "Personalizado",
+    "trust3": "Conectado"
   },
   "features": {
     "title1": "¿Por qué",
     "title2": "elegir HackChain?",
-    "subTitle": "El futuro de la certificación profesional ya está aquí. Verificado por expertos y reconocido a nivel mundial.",
     "items": {
       "certificates": {
-        "title": "Certificados Verificables",
-        "description": "Credenciales que no pueden ser falsificadas ni manipuladas. Sé dueño de tus logros para siempre."
+        "title": "Certificados",
+        "description": "Tus certificados te ayudan a encontrar empleos acorde a tus habilidades en los cuales tengas mas posibilidades de ser contratado."
       },
       "recruiter": {
-        "title": "Verificación de Reclutadores",
-        "description": "Verificación instantánea de credenciales para empleadores. No más certificados falsos ni largas verificaciones de antecedentes."
+        "title": "Vacantes",
+        "description": "Tus vacantes de empleo llegan a los candidatos correctos, con las habilidades que tu empresa necesita."
       },
       "trust": {
-        "title": "Confianza Real",
-        "description": "Perfiles y reputación transparentes para que reclutadores y educadores sepan con quién están hablando."
+        "title": "Reputación",
+        "description": "Todos los usuarios dentro del ecosistema pueden calificarse entre si para construir una reputación confiable."
       },
       "security": {
-        "title": "Seguridad Primero",
-        "description": "Máxima protección para tus credenciales y datos personales."
+        "title": "Seguridad",
+        "description": "Tus certificados, vacantes y perfiles están respaldados por un identificador único, inmutable e infalsificable."
       },
       "instant": {
-        "title": "Verificación Instantánea",
-        "description": "Verificación de credenciales en tiempo real. Sin esperas, sin papeleo."
+        "title": "Rapidez",
+        "description": "Toda tu experiencia academica y laboral puede ser verificada instantáneamente por cualquier Reclutador."
       },
       "global": {
-        "title": "Reconocimiento Global",
-        "description": "Certificados reconocidos a nivel mundial por todas las empresas."
+        "title": "Global",
+        "description": "Encuentra Talentos, Educadores y Reclutadores de cualquier parte del mundo."
       }
     }
   },
@@ -72,28 +62,28 @@
     "title1": "Comienza a construir tu ",
     "title2": "identidad",
     "title3": " hoy",
-    "description": "Únete a miles de profesionales que construyen identidades digitales confiables y verificables.",
+    "description": "Crea tu usuario para conectar con educación y oportunidades laborales en todo el mundo.",
     "stats": {
       "247": {
         "title": "24/7",
-        "subtitle": "Verificación"
+        "subtitle": "Soporte"
       },
       "free": {
         "title": "Gratis",
         "subtitle": "Registro"
       },
       "instant": {
-        "title": "Instantáneo",
-        "subtitle": "Activación de perfil"
+        "title": "Sencillo",
+        "subtitle": "Uso"
       },
       "global": {
         "title": "Global",
-        "subtitle": "Reconocimiento"
+        "subtitle": "Comunidad"
       }
     }
   },
   "footer": {
-    "copyright": "© 2025 HackChain. Talento No Fungible."
+    "copyright": "HackChain ®"
   },
   "team": {
     "title": "Conoce al equipo",
@@ -458,7 +448,7 @@
     "already": "¿Ya tienes una cuenta?",
     "signIn": "Iniciar Sesión",
     "formTitle": "Crear Cuenta de Educador",
-    "formDesc": "Ingresa tu información  para emitir certificados"
+    "formDesc": "Ingresa tu información para emitir certificados"
   },
   "registerRecruiter": {
     "back": "Volver a Registro",
@@ -475,7 +465,7 @@
     "b1Desc": "Candidatos en segundos",
     "b2Title": "Habilidades Verificadas",
     "b2Desc": "Autenticadas por blockchain",
-    "already": "¿Ya tienes una cuenta",
+    "already": "¿Ya tienes una cuenta?",
     "signIn": "Iniciar Sesión",
     "formTitle": "Crear Cuenta de Reclutador",
     "formDesc": "Ingresa tu información para buscar talento"

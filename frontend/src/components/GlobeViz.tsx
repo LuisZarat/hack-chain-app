@@ -66,7 +66,7 @@ const GlobeViz = ({ mobile = false }: { mobile?: boolean }) => {
     const updateSize = () => {
       if (containerRef.current) {
         const w = containerRef.current.offsetWidth;
-        setSize(Math.min(w, mobile ? 360 : 560));
+        setSize(Math.min(w, mobile ? 360 : 900));
       }
     };
     updateSize();
