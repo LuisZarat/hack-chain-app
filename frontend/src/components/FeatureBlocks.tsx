@@ -6,16 +6,16 @@ const FeatureBlocks = () => {
 
   const features = [
     {
-      imgSrc: '/icons/libro.avif',
-      alt: 'NFT Certificates',
-      title: t('features.items.nft.title'),
-      description: t('features.items.nft.description'),
+      imgSrc: '/icons/medalla.avif',
+      alt: 'Certificados verificables',
+      title: t('features.items.certificates.title'),
+      description: t('features.items.certificates.description'),
       claySrc: 'from-purple-500/80 via-fuchsia-500/65 to-purple-700/50',
       shadow: 'shadow-clay-purple',
     },
     {
       imgSrc: '/icons/maletin.avif',
-      alt: 'Recruiter',
+      alt: 'Reclutador',
       title: t('features.items.recruiter.title'),
       description: t('features.items.recruiter.description'),
       claySrc: 'from-cyan-400/80 via-sky-500/65 to-blue-700/50',
@@ -23,15 +23,15 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/check.avif',
-      alt: 'DAO',
-      title: t('features.items.dao.title'),
-      description: t('features.items.dao.description'),
+      alt: 'Confianza',
+      title: t('features.items.trust.title'),
+      description: t('features.items.trust.description'),
       claySrc: 'from-emerald-400/80 via-green-500/65 to-emerald-700/50',
       shadow: 'shadow-clay-emerald',
     },
     {
       imgSrc: '/icons/escudo.avif',
-      alt: 'Security',
+      alt: 'Seguridad',
       title: t('features.items.security.title'),
       description: t('features.items.security.description'),
       claySrc: 'from-pink-400/80 via-rose-500/65 to-pink-700/50',
@@ -39,7 +39,7 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/rayo.avif',
-      alt: 'Instant',
+      alt: 'Instantáneo',
       title: t('features.items.instant.title'),
       description: t('features.items.instant.description'),
       claySrc: 'from-amber-300/80 via-orange-500/65 to-orange-700/50',
@@ -47,7 +47,7 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/mundo.avif',
-      alt: 'Global',
+      alt: 'Alcance global',
       title: t('features.items.global.title'),
       description: t('features.items.global.description'),
       claySrc: 'from-indigo-400/80 via-violet-500/65 to-indigo-700/50',

@@ -22,6 +22,10 @@ export default {
 				title: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
 				body: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
 			},
+			transitionTimingFunction: {
+				'menu-icon': 'cubic-bezier(0.68, -0.55, 0.26, 1.55)',
+				'menu-slide': 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

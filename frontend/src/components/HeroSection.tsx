@@ -1,20 +1,11 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useHoverInteractions } from '@/hooks/useAnimeHooks';
 
 const GlobeViz = lazy(() => import('@/components/GlobeViz'));
 
-const infraLogos = [
-  { src: '/images/polygon.webp', alt: 'Polygon', label: 'Polygon', bg: 'from-black-500 to-white-700' },
-  { src: '/images/pinata.webp', alt: 'Pinata Cloud', label: 'Pinata Cloud', bg: 'from-emerald-400 to-teal-600' },
-  { src: '/images/opensea.webp', alt: 'OpenSea', label: 'OpenSea', bg: 'from-blue-400 to-blue-600' },
-  { src: '/images/walletConnect.webp', alt: 'WalletConnect', label: 'WalletConnect', bg: 'from-cyan-400 to-sky-600' },
-];
-
 const HeroSection = () => {
   const { t } = useTranslation();
-  const { handleIconHover, handleIconLeave } = useHoverInteractions();
   const [isDesktop, setIsDesktop] = useState(() =>
     typeof window !== 'undefined' ? window.innerWidth >= 1024 : false
   );
@@ -29,79 +20,98 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-[90vh] flex items-center relative overflow-x-hidden pt-28 sm:pt-32 mt-4 sm:mt-8"
+      className="min-h-screen flex items-center relative pt-28 sm:pt-32"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8 xl:gap-16">
+      {/* Decorative background layer — clipped separately so it never affects the globe */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#F743EE]/[0.08] rounded-full blur-[140px]" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#8B11D1]/[0.10] rounded-full blur-[160px]" />
+        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#4BC6B9]/[0.07] rounded-full blur-[130px]" />
 
-          {/* Left — title + subtitles + logos */}
+        {/* Subtle dot grid texture */}
+        <div
+          className="absolute inset-0 opacity-[0.15]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+
+        {/* Floating decorative rings */}
+        <div className="absolute top-20 left-[8%] w-24 h-24 rounded-full border border-white/[0.06] hidden lg:block" />
+        <div className="absolute bottom-24 left-[15%] w-16 h-16 rounded-full border border-[#F743EE]/20 hidden lg:block" />
+        <div className="absolute top-1/3 right-[6%] w-32 h-32 rounded-full border border-[#4BC6B9]/15 hidden lg:block" />
+
+        {/* Floating dots */}
+        <span className="absolute top-[18%] left-[45%] w-1.5 h-1.5 rounded-full bg-[#F743EE]/60 hidden lg:block" />
+        <span className="absolute bottom-[28%] left-[6%] w-2 h-2 rounded-full bg-[#8B11D1]/50 hidden lg:block" />
+        <span className="absolute top-[12%] right-[20%] w-1.5 h-1.5 rounded-full bg-[#4BC6B9]/60 hidden lg:block" />
+
+        {/* Diagonal accent line */}
+        <div className="absolute top-0 left-1/2 w-px h-40 bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block" />
+      </div>
+
+      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-4 xl:gap-8">
+
           <motion.div
-            className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left"
+            className="flex-1 min-w-0 flex flex-col items-center text-center lg:items-start lg:text-left relative"
             initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: 'spring', stiffness: 80, damping: 18, delay: 0.1 }}
           >
-            <h1 className="font-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.02] tracking-tight">
-              {t('hero.title1')}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 drop-shadow-[0_0_28px_rgba(168,85,247,0.55)]">
+            {/* Small accent bracket above title */}
+            <div className="hidden lg:flex items-center gap-2 mb-6">
+              <div className="w-8 h-px bg-gradient-to-r from-[#F743EE] to-[#4BC6B9]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#8B11D1]" />
+            </div>
+
+            <h1 className="font-title text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl font-black mb-10 leading-[0.95] tracking-tight flex flex-col gap-1">
+              <span className="text-[#F743EE] drop-shadow-[0_0_24px_rgba(247,67,238,0.4)]">
+                {t('hero.title1')}
+              </span>
+              <span className="text-[#8B11D1] drop-shadow-[0_0_24px_rgba(139,17,209,0.4)]">
                 {t('hero.title2')}
+              </span>
+              <span className="text-[#4BC6B9] drop-shadow-[0_0_24px_rgba(75,198,185,0.4)]">
+                {t('hero.title3')}
               </span>
             </h1>
 
-            <p className="font-body text-lg sm:text-xl text-white/60 mb-3 max-w-xl leading-relaxed font-medium">
-              {t('hero.subTitle1')}
-            </p>
-            <p className="font-body text-lg sm:text-xl text-white/60 mb-10 max-w-xl leading-relaxed font-medium">
-              {t('hero.subTitle2')}
-            </p>
-
-            {/* Infrastructure logos — moved here, below the subtitle text */}
-            <div className="flex flex-col items-center lg:items-start mt-2">
-              <p className="font-title text-xs uppercase tracking-[0.22em] text-white/35 text-center lg:text-left mb-6 font-bold">
-                {t('hero.infrastructure')}
+            <div className="flex items-start gap-5 max-w-3xl">
+              <div className="hidden sm:block w-1.5 self-stretch rounded-full bg-gradient-to-b from-[#F743EE] via-[#8B11D1] to-[#4BC6B9] shrink-0 mt-1 shadow-[0_0_20px_rgba(139,17,209,0.5)]" />
+              <p className="font-title text-3xl sm:text-4xl md:text-5xl text-white/90 font-bold leading-tight tracking-tight">
+                {t('hero.subTitle1')}
               </p>
-              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-8 sm:gap-10">
-                {infraLogos.map((item) => (
-                  <div
-                    key={item.label}
-                    onMouseEnter={(e) => handleIconHover(e as unknown as React.MouseEvent<HTMLDivElement>)}
-                    onMouseLeave={(e) => handleIconLeave(e as unknown as React.MouseEvent<HTMLDivElement>)}
-                    className="flex flex-col items-center gap-3 cursor-pointer group"
-                  >
-                    <div
-                      className={`w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl md:rounded-[1.75rem] bg-gradient-to-br ${item.bg} opacity-95 group-hover:opacity-100 transition-all duration-300 shadow-[inset_0_-6px_12px_rgba(0,0,0,0.3),_inset_0_4px_10px_rgba(255,255,255,0.4),_0_10px_20px_rgba(0,0,0,0.4)] group-hover:-translate-y-2 group-hover:scale-105 border border-white/20`}
-                    >
-                      <img
-                        src={item.src}
-                        alt={item.alt}
-                        loading="lazy"
-                        className="h-7 sm:h-8 md:h-10 object-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]"
-                      />
-                    </div>
-                    <span className="font-body text-xs text-white/50 group-hover:text-white/90 transition-colors duration-300 font-medium">
-                      {item.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
+
+            {/* Decorative corner bracket, bottom-left of text block */}
+            <div className="hidden lg:block absolute -bottom-10 left-0 w-20 h-20 border-b-2 border-l-2 border-white/[0.06] rounded-bl-3xl" />
           </motion.div>
 
-          {/* Right — globe with reflection */}
           <motion.div
-            className="flex-1 flex flex-col items-center justify-center w-full lg:-mt-52"
-            initial={{ opacity: 0, x: 32 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: 'spring', stiffness: 80, damping: 18, delay: 0.25 }}
+            className="flex-1 min-w-0 flex flex-col items-center justify-center w-full relative"
+            initial={{ opacity: 0, x: 32, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 70, damping: 18, delay: 0.25 }}
           >
+            {/* Halo glow directly behind the globe */}
+            <div className="absolute w-[90%] aspect-square max-w-[560px] rounded-full bg-gradient-to-br from-[#8B11D1]/25 via-[#F743EE]/10 to-[#4BC6B9]/15 blur-[100px] pointer-events-none" />
+
+            {/* Orbit ring decoration around globe */}
+            <div className="absolute w-[80%] aspect-square max-w-[500px] rounded-full border border-white/[0.08] pointer-events-none" />
+            <div className="absolute w-[92%] aspect-square max-w-[580px] rounded-full border border-dashed border-white/[0.05] pointer-events-none" />
+
             <Suspense
               fallback={
-                <div className="w-[340px] h-[340px] lg:w-[480px] lg:h-[480px] flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full border-2 border-purple-500/30 border-t-purple-500 animate-spin" />
+                <div className="w-full aspect-square max-w-[560px] flex items-center justify-center relative z-10">
+                  <div className="w-14 h-14 rounded-full border-2 border-purple-500/30 border-t-purple-500 animate-spin" />
                 </div>
               }
             >
-              <GlobeViz mobile={!isDesktop} />
+              <div className="w-full aspect-square max-w-[560px] relative z-10">
+                <GlobeViz mobile={!isDesktop} />
+              </div>
             </Suspense>
           </motion.div>
 

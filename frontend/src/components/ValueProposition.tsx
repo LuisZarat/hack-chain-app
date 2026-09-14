@@ -19,6 +19,7 @@ const ValueProposition = () => {
       alt: 'Talent',
       title: t('valueProp.step1Title'),
       desc: t('valueProp.step1Desc'),
+      tags: [t('valueProp.step1Tag1'), t('valueProp.step1Tag2'), t('valueProp.step1Tag3')],
       claySrc: 'from-purple-500/80 via-fuchsia-500/65 to-purple-700/50',
       shadow: 'shadow-clay-purple',
     },
@@ -27,6 +28,7 @@ const ValueProposition = () => {
       alt: 'Educator',
       title: t('valueProp.step2Title'),
       desc: t('valueProp.step2Desc'),
+      tags: [t('valueProp.step2Tag1'), t('valueProp.step2Tag2'), t('valueProp.step2Tag3')],
       claySrc: 'from-cyan-400/80 via-sky-500/65 to-blue-700/50',
       shadow: 'shadow-clay-cyan',
     },
@@ -35,6 +37,7 @@ const ValueProposition = () => {
       alt: 'Recruiter',
       title: t('valueProp.step3Title'),
       desc: t('valueProp.step3Desc'),
+      tags: [t('valueProp.step3Tag1'), t('valueProp.step3Tag2'), t('valueProp.step3Tag3')],
       claySrc: 'from-emerald-400/80 via-green-500/65 to-emerald-700/50',
       shadow: 'shadow-clay-emerald',
     },
@@ -62,7 +65,6 @@ const ValueProposition = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Luminous path — desktop horizontal */}
           <svg
             className="hidden lg:block absolute top-10 left-0 w-full h-32 pointer-events-none"
             viewBox="0 0 1200 120"
@@ -96,7 +98,6 @@ const ValueProposition = () => {
             />
           </svg>
 
-          {/* Luminous path — mobile vertical */}
           <svg
             className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 h-full w-32 pointer-events-none"
             viewBox="0 0 120 1000"
@@ -147,9 +148,20 @@ const ValueProposition = () => {
                   {step.title}
                 </h3>
 
-                <p className="font-body text-base md:text-lg text-white/55 leading-relaxed font-medium max-w-xs">
+                <p className="font-body text-base md:text-lg text-white/55 leading-relaxed font-medium max-w-xs mb-5">
                   {step.desc}
                 </p>
+
+                <div className="flex flex-wrap justify-center gap-2">
+                  {step.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-body text-xs uppercase tracking-[0.1em] text-white/50 font-semibold px-3 py-1 rounded-full border border-white/10 bg-white/[0.03]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>

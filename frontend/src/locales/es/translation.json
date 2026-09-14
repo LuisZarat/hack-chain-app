@@ -10,22 +10,29 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title1": "Habilidades verificadas para la ",
-    "title2": "Era digital",
-    "subTitle1": "HackChain es el estándar confiable para la certificación basada en blockchain.",
-    "subTitle2": "Verifica habilidades, emite certificados NFT y conecta el talento con oportunidades reales.",
-    "infrastructure": "Construido sobre infraestructura Web3 confiable"
-  },
+    "title1": "Estudia",
+    "title2": "Enseña",
+    "title3": "Emplea",
+    "subTitle1": "Talentos, Educadores y Reclutadores\nen un ecosistema académico-laboral único."  },
   "valueProp": {
     "title1": "Cómo ",
     "title2": "Funciona",
-    "subTitle": "Desde el aprendizaje hasta el empleo — tu viaje en el ecosistema de certificación profesional Web3",
+    "subTitle": "Desde el aprendizaje hasta el empleo — tu viaje dentro del ecosistema HackChain",
     "step1Title": "Talento",
     "step1Desc": "Completa cursos profesionales y aprueba evaluaciones rigurosas en tu campo de especialización",
-    "step2Title": "Certificado NFT",
-    "step2Desc": "Recibe un certificado NFT verificado por blockchain que demuestra tu experiencia",
+    "step1Tag1": "Aprender",
+    "step1Tag2": "Calificar",
+    "step1Tag3": "Postularse",
+    "step2Title": "Educador",
+    "step2Desc": "Comparte tu conocimiento, emite certificados verificados y ayuda a formar a la próxima generación de profesionales",
+    "step2Tag1": "Enseñar",
+    "step2Tag2": "Calificar",
+    "step2Tag3": "Recomendar",
     "step3Title": "Reclutador",
-    "step3Desc": "Los empleadores verifican credenciales al instante y contratan a los mejores talentos certificados",
+    "step3Desc": "Verifica credenciales al instante y contrata a los mejores talentos certificados",
+    "step3Tag1": "Consultar",
+    "step3Tag2": "Calificar",
+    "step3Tag3": "Emplear",
     "trust1": "A prueba de manipulaciones",
     "trust2": "Verificación instantánea",
     "trust3": "Reconocimiento global"
@@ -33,27 +40,27 @@
   "features": {
     "title1": "¿Por qué",
     "title2": "elegir HackChain?",
-    "subTitle": "El futuro de la certificación ya está aquí. Construido en blockchain, verificado por expertos y reconocido a nivel mundial.",
+    "subTitle": "El futuro de la certificación profesional ya está aquí. Verificado por expertos y reconocido a nivel mundial.",
     "items": {
-      "nft": {
-        "title": "Certificados NFT",
-        "description": "Credenciales verificadas por blockchain que no pueden ser falsificadas ni manipuladas. Sé dueño de tus logros para siempre."
+      "certificates": {
+        "title": "Certificados Verificables",
+        "description": "Credenciales que no pueden ser falsificadas ni manipuladas. Sé dueño de tus logros para siempre."
       },
       "recruiter": {
         "title": "Verificación de Reclutadores",
         "description": "Verificación instantánea de credenciales para empleadores. No más certificados falsos ni largas verificaciones de antecedentes."
       },
-      "dao": {
-        "title": "Gobernanza DAO",
-        "description": "Decisiones de la plataforma impulsadas por la comunidad. Vota sobre nuevas certificaciones, estándares y mejoras de la plataforma."
+      "trust": {
+        "title": "Confianza Real",
+        "description": "Perfiles y reputación transparentes para que reclutadores y educadores sepan con quién están hablando."
       },
       "security": {
         "title": "Seguridad Primero",
-        "description": "Construido con la seguridad de blockchain para todos los profesionales. Máxima protección para tus credenciales."
+        "description": "Máxima protección para tus credenciales y datos personales."
       },
       "instant": {
         "title": "Verificación Instantánea",
-        "description": "Verificación de credenciales en tiempo real impulsada por contratos inteligentes. Sin esperas, sin papeleo."
+        "description": "Verificación de credenciales en tiempo real. Sin esperas, sin papeleo."
       },
       "global": {
         "title": "Reconocimiento Global",
@@ -65,7 +72,7 @@
     "title1": "Comienza a construir tu ",
     "title2": "identidad",
     "title3": " hoy",
-    "description": "Únete a miles de profesionales que adoptan credenciales verificadas por blockchain para construir identidades digitales globales, confiables y verificables.",
+    "description": "Únete a miles de profesionales que construyen identidades digitales confiables y verificables.",
     "stats": {
       "247": {
         "title": "24/7",
@@ -77,7 +84,7 @@
       },
       "instant": {
         "title": "Instantáneo",
-        "subtitle": "Emisión de NFT"
+        "subtitle": "Activación de perfil"
       },
       "global": {
         "title": "Global",
@@ -606,14 +613,13 @@
     "text": "HackChain es asesorado por Token Consulting Group. Consultoría integral especializada en proyectos de tokenización."
   },
   "marquee": {
-    "eyebrow": "Acceso universal",
-    "wallets": "Compatible con más de 400 wallets",
-    "title1": "Entra con ",
-    "title2": "cualquier wallet",
-    "subtitle": "Usa la wallet que ya tienes — sin cuentas nuevas, sin contraseñas extra. Te logueas con la misma llave con la que manejas tus activos.",
-    "stat1": "+400 wallets",
-    "stat2": "WalletConnect v2",
-    "stat3": "Login en un toque"
+    "eyebrow": "Un ecosistema conectado",
+    "title1": "Todo gira ",
+    "title2": "alrededor de ti",
+    "subtitle": "Talento, educadores y reclutadores conectados en un mismo ciclo: aprender, enseñar, calificar y crecer juntos.",
+    "stat1": "Talento certificado",
+    "stat2": "Educadores verificados",
+    "stat3": "Match instantáneo"
   },
   "educatorLanding": {
     "eyebrow": "Dashboard educador",
@@ -1171,7 +1177,7 @@
     "emptyEducator": "Aún no tenés clases agendadas.",
     "myCalendar": "Mi Calendario"
   },
-    "share": {
+  "share": {
     "shareButton": "Compartir",
     "title": "Compartir perfil",
     "shareVia": "Compartir mediante",
@@ -1182,8 +1188,8 @@
     "scanProfile": "Escanea para ver el perfil de {{name}}"
   },
   "shareCertificate": {
-  "title": "Compartir certificado",
-  "shareText": "Mira mi certificado en HackChain",
-  "scanCertificate": "Escanea para ver {{name}}"
-}
+    "title": "Compartir certificado",
+    "shareText": "Mira mi certificado en HackChain",
+    "scanCertificate": "Escanea para ver {{name}}"
+  }
 }

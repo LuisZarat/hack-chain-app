@@ -128,7 +128,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative z-50">
                 <div
-                  className={`transition-transform duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${isMenuOpen ? 'rotate-180' : 'rotate-0'
+                  className={`transition-transform duration-500 ease-menu-icon ${isMenuOpen ? 'rotate-180' : 'rotate-0'
                     }`}
                 >
                   {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -153,7 +153,7 @@ const Navbar = () => {
 
         {/* Sidebar Drawer */}
         <div
-          className={`absolute top-0 left-0 bottom-0 w-[80%] max-w-sm bg-[#0B0B0F] border-r border-white/5 shadow-[20px_0_40px_rgba(0,0,0,0.5)] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] flex flex-col ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+          className={`absolute top-0 left-0 bottom-0 w-[80%] max-w-sm bg-[#0B0B0F] border-r border-white/5 shadow-[20px_0_40px_rgba(0,0,0,0.5)] transition-transform duration-500 ease-menu-slide flex flex-col ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
         >
           {/* Ambient glows inside drawer */}
           <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-purple-500/10 blur-[80px] pointer-events-none rounded-full" />

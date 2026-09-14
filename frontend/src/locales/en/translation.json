@@ -10,22 +10,30 @@
     "contact": "Contact"
   },
   "hero": {
-    "title1": "Verified skills for the ",
-    "title2": "Digital age",
-    "subTitle1": "HackChain is the trusted standard for blockchain-based certification.",
-    "subTitle2": "Verify skills, issue NFT certificates, and connect talent with real opportunities.",
-    "infrastructure": "Built on trusted Web3 infrastructure"
+    "title1": "Learn",
+    "title2": "Teach",
+    "title3": "Work",
+    "subTitle1": "Talent, Educators, and Recruiters\n in one unique academic-professional ecosystem."
   },
   "valueProp": {
     "title1": "How It ",
     "title2": "Works",
-    "subTitle": "From learning to employment — your journey in the Web3 professional certification ecosystem",
+    "subTitle": "From learning to employment — your journey inside the HackChain ecosystem",
     "step1Title": "Talent",
     "step1Desc": "Complete professional courses and pass rigorous assessments in your field of expertise",
-    "step2Title": "NFT Certificate",
-    "step2Desc": "Receive a blockchain-verified NFT certificate that proves your expertise",
+    "step1Tag1": "Learn",
+    "step1Tag2": "Rate",
+    "step1Tag3": "Apply",
+    "step2Title": "Educator",
+    "step2Desc": "Share your knowledge, issue verified certificates, and help train the next generation of professionals",
+    "step2Tag1": "Teach",
+    "step2Tag2": "Rate",
+    "step2Tag3": "Recommend",
     "step3Title": "Recruiter",
-    "step3Desc": "Employers instantly verify credentials and hire top verified talent",
+    "step3Desc": "Instantly verify credentials and hire the best certified talent",
+    "step3Tag1": "Browse",
+    "step3Tag2": "Rate",
+    "step3Tag3": "Hire",
     "trust1": "Tamper-proof",
     "trust2": "Instant verification",
     "trust3": "Global recognition"
@@ -33,27 +41,27 @@
   "features": {
     "title1": "Why",
     "title2": "Choose Hack Chain?",
-    "subTitle": "The future of certification is here. Built on blockchain, verified by experts, and recognized globally.",
+    "subTitle": "The future of professional certification is here. Verified by experts and recognized globally.",
     "items": {
-      "nft": {
-        "title": "NFT Certificates",
-        "description": "Blockchain-verified credentials that can't be forged or faked. Own your achievements forever."
+      "certificates": {
+        "title": "Verifiable Certificates",
+        "description": "Credentials that can't be forged or manipulated. Own your achievements forever."
       },
       "recruiter": {
         "title": "Recruiter Verification",
         "description": "Instant credential verification for employers. No more fake certificates or lengthy background checks."
       },
-      "dao": {
-        "title": "DAO Governance",
-        "description": "Community-driven platform decisions. Vote on new certifications, standards, and platform improvements."
+      "trust": {
+        "title": "Real Trust",
+        "description": "Transparent profiles and reputation so recruiters and educators know exactly who they're talking to."
       },
       "security": {
         "title": "Security First",
-        "description": "Built with blockchain security for all professionals. Maximum protection for your credentials."
+        "description": "Maximum protection for your credentials and personal data."
       },
       "instant": {
         "title": "Instant Verification",
-        "description": "Real-time credential verification powered by smart contracts. No waiting, no paperwork."
+        "description": "Real-time credential verification. No waiting, no paperwork."
       },
       "global": {
         "title": "Global Recognition",
@@ -65,7 +73,7 @@
     "title1": "Start building your ",
     "title2": "identity",
     "title3": " today",
-    "description": "Join thousands of professionals adopting blockchain-verified credentials to build trusted, verifiable, and global digital identities.",
+    "description": "Join thousands of professionals building trusted, verifiable digital identities.",
     "stats": {
       "247": {
         "title": "24/7",
@@ -77,7 +85,7 @@
       },
       "instant": {
         "title": "Instant",
-        "subtitle": "NFT Issuance"
+        "subtitle": "Profile activation"
       },
       "global": {
         "title": "Global",
@@ -606,14 +614,13 @@
     "text": "HackChain is advised by Token Consulting Group. Comprehensive consulting specialized in tokenization projects."
   },
   "marquee": {
-    "eyebrow": "Universal access",
-    "wallets": "Compatible with 400+ wallets",
-    "title1": "Sign in with ",
-    "title2": "any wallet",
-    "subtitle": "Bring your existing wallet — no new account, no extra password. We sign you in with the same key you already use to manage your assets.",
-    "stat1": "400+ wallets",
-    "stat2": "WalletConnect v2",
-    "stat3": "One-tap sign-in"
+    "eyebrow": "A connected ecosystem",
+    "title1": "Everything revolves ",
+    "title2": "around you",
+    "subtitle": "Talent, educators, and recruiters connected in one cycle: learning, teaching, rating, and growing together.",
+    "stat1": "Certified talent",
+    "stat2": "Verified educators",
+    "stat3": "Instant match"
   },
   "educatorLanding": {
     "eyebrow": "Educator dashboard",
@@ -1170,8 +1177,8 @@
     "emptyEducator": "No classes scheduled yet.",
     "myCalendar": "My Calendar"
   },
-    "share": {
-    "shareButton": "Share", 
+  "share": {
+    "shareButton": "Share",
     "title": "Share profile",
     "shareVia": "Share via",
     "profileLink": "Profile Link",
@@ -1181,8 +1188,8 @@
     "scanProfile": "Scan to view profile of {{name}}"
   },
   "shareCertificate": {
-  "title": "Share Certificate",
-  "shareText": "Check out my certificate on HackChain",
-  "scanCertificate": "Scan to view {{name}}"
-}
+    "title": "Share Certificate",
+    "shareText": "Check out my certificate on HackChain",
+    "scanCertificate": "Scan to view {{name}}"
+  }
 }
