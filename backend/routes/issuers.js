@@ -11,6 +11,8 @@ const { authenticate } = require("../middleware/auth");
 const { requireAdmin } = require("../middleware/requireAdmin");
 const emailService = require("../services/emailService");
 const { getAdminEmails } = require("../services/adminService");
+const { getOwnPaymentMethods } = require("../usecases/issuers/getOwnPaymentMethods");
+const { updatePaymentMethods } = require("../usecases/issuers/updatePaymentMethods");
 const { getOwnClassSettings } = require("../usecases/issuers/getOwnClassSettings");
 const { updateClassSettings } = require("../usecases/issuers/updateClassSettings");
 const { getOwnIssuerProfile } = require("../usecases/issuers/getOwnIssuerProfile");
@@ -213,6 +215,44 @@ router.patch("/me/classes", authenticate, async (req, res) => {
   } catch (err) {
     console.error("PATCH /api/issuers/me/classes error:", err);
     return res.status(500).json({ error: "Failed to update class settings" });
+  }
+});
+
+// GET /api/issuers/me/payment-methods — own payment methods config (authenticated)
+router.get("/me/payment-methods", authenticate, async (req, res) => {
+  if (req.auth.role !== "issuer") {
+    return res.status(403).json({ error: "Only educator accounts can access this endpoint" });
+  }
+
+  try {
+    const result = await getOwnPaymentMethods({ models: { Issuer }, wallet: req.auth.wallet });
+    if (!result.ok) return res.status(result.httpStatus).json({ error: result.message });
+    return res.json(result.data);
+  } catch (err) {
+    console.error("GET /api/issuers/me/payment-methods error:", err);
+    return res.status(500).json({ error: "Failed to fetch payment methods" });
+  }
+});
+
+// PATCH /api/issuers/me/payment-methods — update payment methods config (authenticated)
+router.patch("/me/payment-methods", authenticate, async (req, res) => {
+  if (req.auth.role !== "issuer") {
+    return res.status(403).json({ error: "Only educator accounts can update this endpoint" });
+  }
+
+  try {
+    const result = await updatePaymentMethods({
+      models: { Issuer },
+      wallet: req.auth.wallet,
+      global: req.body.global,
+      local: req.body.local,
+      onchain: req.body.onchain,
+    });
+    if (!result.ok) return res.status(result.httpStatus).json({ error: result.message });
+    return res.json(result.data);
+  } catch (err) {
+    console.error("PATCH /api/issuers/me/payment-methods error:", err);
+    return res.status(500).json({ error: "Failed to update payment methods" });
   }
 });
 

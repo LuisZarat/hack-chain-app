@@ -51,6 +51,8 @@ router.post("/", authenticate, createLimiter, async (req, res) => {
       studentMessage: req.body.student_message,
       issuerClassId: req.body.issuer_class_id,
       requestedTimestampUtc: req.body.requested_timestamp_utc,
+      paymentMethod: req.body.payment_method,
+      paymentProvider: req.body.payment_provider,
     });
 
     if (!result.ok) return res.status(result.httpStatus).json({ error: result.code });
@@ -141,6 +143,8 @@ router.get("/mine", authenticate, async (req, res) => {
         class_name: r.class_name || null,
         status: r.status,
         payment_status: r.payment_status,
+        payment_method: r.payment_method,
+        payment_provider: r.payment_provider,
         currency: r.currency,
         amount: r.amount,
         deposit_proof_url: r.deposit_proof_url,
@@ -191,6 +195,8 @@ router.get("/sent", authenticate, async (req, res) => {
         class_name: r.class_name || null,
         status: r.status,
         payment_status: r.payment_status,
+        payment_method: r.payment_method,
+        payment_provider: r.payment_provider,
         currency: r.currency,
         amount: r.amount,
         deposit_proof_url: r.deposit_proof_url,

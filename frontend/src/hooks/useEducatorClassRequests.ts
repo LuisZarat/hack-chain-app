@@ -24,6 +24,8 @@ export interface EducatorClassRequest {
   class_name: string | null;
   status: 'pending' | 'confirmed' | 'cancelled' | 'completed';
   payment_status: PaymentStatus;
+  payment_method: 'global' | 'local' | 'onchain' | null;
+  payment_provider: string | null;
   currency: string;
   amount: string | null;
   deposit_proof_url: string | null;

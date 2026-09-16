@@ -13,7 +13,8 @@ const CallToAction = () => {
   ];
 
   return (
-<section id="dao" className="pt-8 pb-20 md:pb-32 relative snap-start snap-always">      {/* Section-tinted scrim over the global mosaic — denser, for legibility of large stat numbers */}
+<section id="dao" className="pt-8 pb-20 md:pb-32 relative snap-start snap-always">
+        {/* Section-tinted scrim over the global mosaic — denser, for legibility of large stat numbers */}
       <div className="absolute inset-0 -z-10 bg-[#180528]/75" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#F743EE]/[0.05] via-transparent to-transparent" />
 

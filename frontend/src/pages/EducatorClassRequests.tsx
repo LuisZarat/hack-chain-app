@@ -208,11 +208,42 @@ function PaymentStageRow({ request, stage }: { request: EducatorClassRequest; st
   );
 }
 
+const PAYMENT_METHOD_LABELS: Record<NonNullable<EducatorClassRequest['payment_method']>, string> = {
+  global: 'Pago Global',
+  local: 'Pago Local (transferencia)',
+  onchain: 'Pago Onchain (USDT)',
+};
+
+const PROVIDER_DISPLAY_LABELS: Record<string, string> = {
+  paypal: 'PayPal',
+  revolut: 'Revolut',
+  wise: 'Wise',
+  payoneer: 'Payoneer',
+};
+
+function PaymentMethodBadge({ request }: { request: EducatorClassRequest }) {
+  if (!request.payment_method) return null;
+
+  const methodLabel = PAYMENT_METHOD_LABELS[request.payment_method];
+  const providerLabel = request.payment_provider
+    ? (PROVIDER_DISPLAY_LABELS[request.payment_provider] ?? request.payment_provider)
+    : null;
+
+  return (
+    <span className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 mb-1.5">
+      <CreditCard className="h-3 w-3 shrink-0" />
+      {methodLabel}
+      {providerLabel && <span className="text-slate-500">· {providerLabel}</span>}
+    </span>
+  );
+}
+
 function PaymentSection({ request }: { request: EducatorClassRequest }) {
   if (request.payment_status === 'unpaid') return null;
 
   return (
     <div className="mt-2">
+      <PaymentMethodBadge request={request} />
       <PaymentStageRow request={request} stage="deposit" />
       <PaymentStageRow request={request} stage="final" />
     </div>

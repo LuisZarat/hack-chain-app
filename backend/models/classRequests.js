@@ -75,6 +75,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DECIMAL(28, 8),
       allowNull: true,
     },
+    // Which of the educator's payment methods the talent chose at booking
+// time — 'global' (PayPal/Wise/etc.), 'local' (bank transfer) or
+// 'onchain' (USDT wallet). Independent from payment_network, which is
+// specifically the crypto network used when payment_method is 'onchain'.
+payment_method: {
+  type: DataTypes.STRING(20),
+  allowNull: true,
+  validate: { isIn: [['global', 'local', 'onchain']] },
+},
+payment_provider: {
+  type: DataTypes.STRING(50),
+  allowNull: true,
+},
     payment_network: {
       type: DataTypes.STRING(30),
       allowNull: true,

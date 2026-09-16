@@ -47,6 +47,7 @@ async function getPublicIssuerProfile({ models, walletAddress }) {
         joined_at: issuer.User?.created_at || issuer.created_at,
         is_approved: issuer.User?.educator_approval_status === "approved",
         class_settings: issuer.class_settings ?? null,
+        payment_methods: issuer.payment_methods ?? null,
       },
     },
   };

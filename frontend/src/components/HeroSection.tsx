@@ -21,7 +21,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-className="min-h-screen flex items-center relative pt-28 sm:pt-32 snap-start snap-always"    >
+      className="min-h-screen flex items-center relative pt-28 sm:pt-32 snap-start snap-always"
+    >
       <SectionDivider position="top" />
 
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10">
