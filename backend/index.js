@@ -205,7 +205,7 @@ let server;
     console.log("✅ Database connection authenticated.");
 
     if (process.env.NODE_ENV !== "production") {
-      await db.sequelizeAdmin.sync();
+await db.sequelizeAdmin.sync();
       console.log("✅ Database synchronized.");
     }
 

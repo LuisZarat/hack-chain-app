@@ -20,6 +20,7 @@ import { generateSlots, getUpcomingDays, filterValidSlots, isSlotBusy } from '@/
 import type { UpcomingDay, BusySlot } from '@/lib/slots';
 import { useBusySlots } from '@/hooks/useBusySlots';
 import type { ClassSettings, IssuerClass } from '@/types/dashboard';
+import { PaymentMethodSelector } from '@/components/PaymentMethodSelector.tsx';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -281,6 +282,7 @@ const BookEducatorClass = () => {
   const [selectedClass, setSelectedClass] = useState<SlotSelection | null>(null);
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<'global' | 'local' | 'onchain' | null>(null);
 
   useEffect(() => {
     if (submitted) window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -524,7 +526,17 @@ const BookEducatorClass = () => {
                   USDC
                 </span>
               )}
+
             </div>
+
+                        {/* Payment method selector */}
+            {educator.payment_methods && (
+              <PaymentMethodSelector
+                paymentMethods={educator.payment_methods}
+                value={paymentMethod}
+                onChange={setPaymentMethod}
+              />
+            )}
 
             {/* Step 1 — Class selector */}
             <AnimatePresence mode="wait">

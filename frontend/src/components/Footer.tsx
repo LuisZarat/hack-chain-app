@@ -8,6 +8,7 @@ import {
   FaTiktok,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import SectionDivider from '@/components/SectionDivider';
 
 const socials = [
   {
@@ -32,7 +33,7 @@ const socials = [
   },
   {
     name: 'Telegram',
-    href: 'https://t.me/+cEcZh7zauR4zN2Ix',
+    href: 'https://t.me/+USTw1_jK5co3ODA5',
     icon: <FaTelegram className="w-6 h-6 text-[#26A5E4]" />,
   },
 ];
@@ -43,13 +44,15 @@ const Footer: React.FC = () => {
   const isEs = i18n.language.startsWith('es');
 
   return (
-    <footer className="py-14 bg-black border-t border-white/10 relative z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <footer className="pt-8 py-14 relative z-50">
+      <SectionDivider position="top" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8">
 
         {/* Brand */}
         <div className="mb-3 flex justify-center">
           <img
-            src="/images/logoHackchain2.webp"
+            src="/images/logoHackchain.webp"
             alt="HackChain logo"
             className="h-24 md:h-28 w-auto object-contain"
           />

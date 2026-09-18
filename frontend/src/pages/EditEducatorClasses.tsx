@@ -21,6 +21,7 @@ import { GrainOverlay } from '@/components/profile/GrainOverlay';
 import { useTranslation } from 'react-i18next';
 import { useEducatorApprovalStatus } from '@/hooks/useEducatorApprovalStatus';
 import type { ClassSettings, DayKey, WeeklyAvailability } from '@/types/dashboard';
+import { PaymentMethodsSection } from '@/components/PaymentMethodsSection';
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -632,6 +633,9 @@ const EditEducatorClasses = () => {
 
           {/* ── Class catalog ── */}
           <ClassCatalogSection t={t} prefersReduced={prefersReduced} />
+
+          {/* ── Payment methods ── */}
+          <PaymentMethodsSection prefersReduced={prefersReduced} />
 
           {/* ── Pricing ── */}
           <SectionCard

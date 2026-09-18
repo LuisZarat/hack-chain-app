@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import SectionDivider from '@/components/SectionDivider';
 
 const FeatureBlocks = () => {
   const { t } = useTranslation();
 
   const features = [
     {
-      imgSrc: '/icons/libro.avif',
-      alt: 'NFT Certificates',
-      title: t('features.items.nft.title'),
-      description: t('features.items.nft.description'),
+      imgSrc: '/icons/medalla.avif',
+      alt: 'Certificados verificables',
+      title: t('features.items.certificates.title'),
+      description: t('features.items.certificates.description'),
       claySrc: 'from-purple-500/80 via-fuchsia-500/65 to-purple-700/50',
       shadow: 'shadow-clay-purple',
     },
     {
       imgSrc: '/icons/maletin.avif',
-      alt: 'Recruiter',
+      alt: 'Reclutador',
       title: t('features.items.recruiter.title'),
       description: t('features.items.recruiter.description'),
       claySrc: 'from-cyan-400/80 via-sky-500/65 to-blue-700/50',
@@ -23,15 +24,15 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/check.avif',
-      alt: 'DAO',
-      title: t('features.items.dao.title'),
-      description: t('features.items.dao.description'),
+      alt: 'Confianza',
+      title: t('features.items.trust.title'),
+      description: t('features.items.trust.description'),
       claySrc: 'from-emerald-400/80 via-green-500/65 to-emerald-700/50',
       shadow: 'shadow-clay-emerald',
     },
     {
       imgSrc: '/icons/escudo.avif',
-      alt: 'Security',
+      alt: 'Seguridad',
       title: t('features.items.security.title'),
       description: t('features.items.security.description'),
       claySrc: 'from-pink-400/80 via-rose-500/65 to-pink-700/50',
@@ -39,7 +40,7 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/rayo.avif',
-      alt: 'Instant',
+      alt: 'Instantáneo',
       title: t('features.items.instant.title'),
       description: t('features.items.instant.description'),
       claySrc: 'from-amber-300/80 via-orange-500/65 to-orange-700/50',
@@ -47,7 +48,7 @@ const FeatureBlocks = () => {
     },
     {
       imgSrc: '/icons/mundo.avif',
-      alt: 'Global',
+      alt: 'Alcance global',
       title: t('features.items.global.title'),
       description: t('features.items.global.description'),
       claySrc: 'from-indigo-400/80 via-violet-500/65 to-indigo-700/50',
@@ -71,11 +72,17 @@ const FeatureBlocks = () => {
   };
 
   return (
-    <section id="certificates" className="pt-12 sm:pt-20 pb-32 md:pb-48 relative">
+    <section id="certificates" className="pt-20 sm:pt-28 pb-32 md:pb-48 relative snap-start snap-always">
+      {/* Section-tinted scrim over the global mosaic — purple accent */}
+      <div className="absolute inset-0 -z-10 bg-[#180528]/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#8B11D1]/[0.06] via-transparent to-transparent" />
+
+      <SectionDivider position="top" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
-          className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start text-left mb-10 md:mb-14"
+          className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start text-left mb-10 md:mb-14 mt-8 md:mt-14"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -85,12 +92,7 @@ const FeatureBlocks = () => {
             <span className="block">{t('features.title1')}</span>
             <span className="block gradient-text whitespace-nowrap">{t('features.title2')}</span>
           </h2>
-
-          <div className="flex justify-start lg:justify-end">
-            <p className="font-body text-lg md:text-xl text-white/55 w-full max-w-sm font-medium lg:translate-x-12">
-              {t('features.subTitle')}
-            </p>
-          </div>
+          
         </motion.div>
 
         <motion.div

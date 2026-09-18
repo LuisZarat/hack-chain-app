@@ -22,6 +22,33 @@ export interface Educator {
   is_approved?: boolean;
 }
 
+// ─── Payment methods — mirrors the Issuer.payment_methods JSONB column ───
+
+export interface GlobalProvider {
+  provider: 'paypal' | 'revolut' | 'wise' | 'payoneer' | 'other';
+  identifier: string;
+  providerLabel?: string | null;
+}
+
+export interface OnchainWallet {
+  network: 'polygon' | 'tron' | 'bnb' | 'ethereum';
+  address: string;
+}
+
+export interface PaymentMethods {
+  global?: { enabled: boolean; providers: GlobalProvider[] };
+  local?: {
+    enabled: boolean;
+    country: string;
+    currency: string;
+    bankName: string;
+    accountHolder: string;
+    accountNumber: string;
+    swiftBic?: string | null;
+  };
+  onchain?: { enabled: boolean; wallets: OnchainWallet[] };
+}
+
 export interface EducatorProfile extends Omit<Educator, 'certs_to_me'> {
   talents_formed: number;
   website_url: string | null;
@@ -29,6 +56,7 @@ export interface EducatorProfile extends Omit<Educator, 'certs_to_me'> {
   twitter_url: string | null;
   is_approved?: boolean;
   class_settings: ClassSettings | null;
+  payment_methods: PaymentMethods | null;
 }
 
 export type DayKey = 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun';

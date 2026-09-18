@@ -57,7 +57,7 @@ const enNew = {
 
 const esNew = {
   "features": {
-    "title1": "¿Por qué elegir ",
+    "title1": "¿Por qué elegir HackChain?",
     "title2": "HackChain?",
     "subTitle": "El futuro de la certificación ya está aquí. Construido en blockchain, verificado por expertos y reconocido a nivel mundial.",
     "items": {

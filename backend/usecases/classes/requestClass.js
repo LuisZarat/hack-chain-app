@@ -18,6 +18,8 @@ async function requestClass({
   studentMessage,
   issuerClassId,
   requestedTimestampUtc,
+  paymentMethod,
+  paymentProvider,
 }) {
   if (!models || !studentWallet) {
     throw new TypeError("requestClass requires { models, studentWallet }");
@@ -114,6 +116,12 @@ async function requestClass({
   // they owe while still reaching payment_status: "paid".
   const trustedHourlyRateUsd = issuer.class_settings?.hourly_rate_usd ?? null;
 
+  const VALID_PAYMENT_METHODS = ['global', 'local', 'onchain'];
+  const sanitizedPaymentMethod = VALID_PAYMENT_METHODS.includes(paymentMethod) ? paymentMethod : null;
+  const sanitizedPaymentProvider = sanitizedPaymentMethod && paymentProvider
+    ? String(paymentProvider).trim().slice(0, 50)
+    : null;
+
   const record = await models.ClassRequest.create({
     student_wallet_address: studentWallet.toLowerCase(),
     issuer_wallet_address: issuerWalletAddress.toLowerCase(),
@@ -125,6 +133,8 @@ async function requestClass({
     issuer_class_id: resolvedClassId,
     class_name: resolvedClassName,
     status: "pending",
+    payment_method: sanitizedPaymentMethod,
+    payment_provider: sanitizedPaymentProvider,
   });
 
   return { ok: true, data: { id: record.id, status: record.status, class_name: resolvedClassName } };

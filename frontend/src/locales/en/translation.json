@@ -10,54 +10,52 @@
     "contact": "Contact"
   },
   "hero": {
-    "title1": "Verified skills for the ",
-    "title2": "Digital age",
-    "subTitle1": "HackChain is the trusted standard for blockchain-based certification.",
-    "subTitle2": "Verify skills, issue NFT certificates, and connect talent with real opportunities.",
-    "infrastructure": "Built on trusted Web3 infrastructure"
+    "title1": "Learn",
+    "title2": "Teach",
+    "title3": "Work",
+    "subTitle1": "Talent, Educators, and Recruiters\nin one unique academic-professional ecosystem."
   },
   "valueProp": {
     "title1": "How It ",
     "title2": "Works",
-    "subTitle": "From learning to employment — your journey in the Web3 professional certification ecosystem",
+    "subTitle": "From learning to employment, HackChain helps you get there.",
     "step1Title": "Talent",
-    "step1Desc": "Complete professional courses and pass rigorous assessments in your field of expertise",
-    "step2Title": "NFT Certificate",
-    "step2Desc": "Receive a blockchain-verified NFT certificate that proves your expertise",
+    "step1Desc": "Study any subject and get your certificate",
+    "step2Title": "Educator",
+    "step2Desc": "Teach whatever you like and get rewarded",
     "step3Title": "Recruiter",
-    "step3Desc": "Employers instantly verify credentials and hire top verified talent",
-    "trust1": "Tamper-proof",
-    "trust2": "Instant verification",
-    "trust3": "Global recognition"
+    "step3Desc": "Find your ideal candidate and hire them",
+    "trust1": "Accessible",
+    "trust2": "Personalized",
+    "trust3": "Connected"
   },
   "features": {
     "title1": "Why",
-    "title2": "Choose Hack Chain?",
-    "subTitle": "The future of certification is here. Built on blockchain, verified by experts, and recognized globally.",
+    "title2": "choose HackChain?",
     "items": {
-      "nft": {
-        "title": "NFT Certificates",
-        "description": "Blockchain-verified credentials that can't be forged or faked. Own your achievements forever."
+      "certificates": {
+        "title": "Certificates",
+        "description": "Your certificates help you find jobs that match your skills, where you have the best chances of getting hired."
       },
       "recruiter": {
-        "title": "Recruiter Verification",
-        "description": "Instant credential verification for employers. No more fake certificates or lengthy background checks."
+        "title": "Job Openings",
+        "description": "Your job openings reach the right candidates, with the skills your company needs."
       },
-      "dao": {
-        "title": "DAO Governance",
-        "description": "Community-driven platform decisions. Vote on new certifications, standards, and platform improvements."
+      "trust": {
+        "title": "Reputation",
+        "description": "All users within the ecosystem can rate each other to build a trustworthy reputation."
       },
       "security": {
-        "title": "Security First",
-        "description": "Built with blockchain security for all professionals. Maximum protection for your credentials."
+        "title": "Security",
+        "description": "Your certificates, job postings, and profiles are backed by a unique, immutable, and unforgeable identifier."
       },
       "instant": {
-        "title": "Instant Verification",
-        "description": "Real-time credential verification powered by smart contracts. No waiting, no paperwork."
+        "title": "Speed",
+        "description": "All your academic and professional experience can be verified instantly by any Recruiter."
       },
       "global": {
-        "title": "Global Recognition",
-        "description": "Certificates recognized worldwide by all companies."
+        "title": "Global",
+        "description": "Find Talent, Educators, and Recruiters from anywhere in the world."
       }
     }
   },
@@ -65,28 +63,28 @@
     "title1": "Start building your ",
     "title2": "identity",
     "title3": " today",
-    "description": "Join thousands of professionals adopting blockchain-verified credentials to build trusted, verifiable, and global digital identities.",
+    "description": "Create your account to connect with education and job opportunities around the world.",
     "stats": {
       "247": {
         "title": "24/7",
-        "subtitle": "Verification"
+        "subtitle": "Support"
       },
       "free": {
         "title": "Free",
-        "subtitle": "Registration"
+        "subtitle": "Sign-up"
       },
       "instant": {
-        "title": "Instant",
-        "subtitle": "NFT Issuance"
+        "title": "Simple",
+        "subtitle": "To use"
       },
       "global": {
         "title": "Global",
-        "subtitle": "Recognition"
+        "subtitle": "Community"
       }
     }
   },
   "footer": {
-    "copyright": "© 2025 HackChain. Non-Fungible Talent."
+    "copyright": "HackChain ®"
   },
   "team": {
     "title": "Meet the team",
@@ -105,10 +103,10 @@
       "devOpsEngineer": "DevOps Engineer"
     },
     "aboutBlock": {
-      "title": "About us?",
-      "p1": "HackChain is an educational-labor ecosystem that links Talent, Educators, and Recruiters in order to promote constant learning and transparency in recruitment processes.",
-      "p2": "We believe Web3 technology should be accessible, decentralized, and designed to empower real users. Our goal is to accompany professionals in their growth with immutable tools and credentials that truly make a difference.",
-      "p3": "Our vision is to become the global standard for talent verification, creating a world where every acquired skill is recognized globally without barriers or intermediaries, effectively bridging the gap between education and employment."
+      "title": "About us",
+      "p1": "HackChain is an educational-professional ecosystem that connects Talent, Educators, and Recruiters to promote constant learning and transparency in recruitment processes.",
+      "p2": "We believe Web3 technology should be accessible, decentralized, and designed to empower real users. Our goal is to support professionals in their growth with immutable tools and credentials that truly make a difference.",
+      "p3": "Our vision is to become the global standard for talent verification, creating a world where every acquired skill is recognized worldwide without barriers or intermediaries, effectively closing the gap between education and employment."
     },
     "timeline": {
       "title": "COMPANY EVOLUTION",
@@ -120,8 +118,8 @@
       },
       "aug25": {
         "date": "AUG 2025",
-        "title": "Development Starts",
-        "description": "Initial development of the landing page and platform architecture begins."
+        "title": "Development Begins",
+        "description": "Initial development of the website and platform architecture begins."
       },
       "sep25": {
         "date": "SEP 2025",
@@ -130,33 +128,33 @@
       },
       "oct25": {
         "date": "OCT 2025",
-        "title": "Tokenomics Creation",
-        "description": "Start of the tokenomics design and economic model for the platform."
+        "title": "Tokenomics Design",
+        "description": "Work begins on the economic design (tokenomics) for the platform."
       },
       "nov25": {
         "date": "NOV 2025",
         "title": "First Token Version",
-        "description": "First version of the token is audited and ready for deployment."
+        "description": "First version of the token, audited and ready."
       },
       "dec25": {
         "date": "DEC 2025",
         "title": "Public Presale",
-        "description": "Public presale sequence for the first version of the token begins."
+        "description": "The public presale of the first token version begins."
       },
       "jan26": {
         "date": "JAN 2026",
         "title": "Pilot Testing",
-        "description": "Pilot tests for the first design of tokenized certificates."
+        "description": "Pilot testing of the first tokenized certificate design."
       },
       "feb26": {
         "date": "FEB 2026",
         "title": "Production Launch",
-        "description": "HackChain is officially launched to the public mainnet."
+        "description": "HackChain officially launches to production."
       },
       "mar26": {
         "date": "MAR 2026",
         "title": "First Users",
-        "description": "First Talents and Educators successfully registered on the platform."
+        "description": "First Talents and Educators registered on the platform."
       }
     }
   },
@@ -183,7 +181,7 @@
     "emailPlaceholder": "name@example.com",
     "passwordLabel": "Password",
     "passwordPlaceholder": "Enter your password",
-    "forgotPassword": "Forgot password?",
+    "forgotPassword": "Forgot your password?",
     "signInBtn": "Sign In",
     "signingInBtn": "Signing In...",
     "continueWith": "Or continue with",
@@ -196,7 +194,7 @@
     "registerHere": "Create an account to get started",
     "walletConnected": "Wallet connected",
     "signToLogin": "Sign to log in",
-    "signing": "Awaiting signature in your wallet...",
+    "signing": "Waiting for signature in your wallet...",
     "useDifferentWallet": "Use a different wallet"
   },
   "dashboard": {
@@ -211,7 +209,7 @@
     "roleLabel": "Role",
     "walletLabel": "Wallet",
     "emailLabel": "Email",
-    "closeSession": "Close Session",
+    "closeSession": "Log out",
     "tabTrayectoria": "Career",
     "tabFormacion": "Training",
     "sectionFormacion": "Training",
@@ -222,15 +220,15 @@
     "tabClasesLink": "Go to my classes",
     "noCertificates": "No certificates yet.",
     "noCertificatesHint": "Complete a course to earn your first NFT.",
-    "errorCertificates": "Couldn't load your certificates.",
+    "errorCertificates": "We couldn't load your certificates.",
     "retry": "Try again",
     "noEducators": "No educators yet.",
-    "noEducatorsHint": "Your educators will appear here when you receive a certificate.",
+    "noEducatorsHint": "Your educators will appear here once you receive a certificate.",
     "discoverComingSoon": "Coming soon.",
     "viewOnOpenSea": "View on OpenSea",
     "errorLoadUser": "Could not load user information.",
     "sessionExpiredTitle": "Session expired",
-    "sessionExpiredDesc": "Your session was closed due to inactivity.",
+    "sessionExpiredDesc": "Your session closed due to inactivity.",
     "classesLabel": "Classes",
     "classesHint": "View my requests",
     "bellAriaLabel": "Class notifications",
@@ -252,10 +250,10 @@
     "confirmed": "confirmed",
     "loading": "Loading...",
     "empty": "You haven't requested any classes yet.",
-    "emptyHint": "Browse available educators and book your first session.",
+    "emptyHint": "Browse the available educators and book your first session.",
     "discover": "Explore educators",
     "viewProfile": "View profile",
-    "sectionActive": "Active",
+    "sectionActive": "In progress",
     "sectionHistory": "History",
     "showMore": "Show {{count}} more",
     "duration": "{{minutes}} min",
@@ -266,7 +264,7 @@
     "cancelNo": "No",
     "cancelReasonPlaceholder": "Reason (optional)",
     "pendingTopicHint": "Topic: {{topic}}.",
-    "pendingStatusHint": "You can check here whether the educator accepted or declined your request.",
+    "pendingStatusHint": "You can check right here whether the educator accepted or declined your request.",
     "viewCertificate": "View my certificates",
     "joinClass": "Join the class",
     "payment": {
@@ -282,18 +280,18 @@
       "uploadFailed": "Couldn't upload the proof",
       "wallet": {
         "payButton": "Pay with my wallet",
-        "orManual": "or upload proof manually",
+        "orManual": "or upload the proof manually",
         "addressLabel": "Educator's wallet",
         "addressHint": "You can transfer using any network you prefer (Tron, BNB Chain, etc.) — then upload the proof or the transaction link below.",
-        "errorTxNotFound": "We couldn't find that transaction yet. Wait a moment and try again.",
+        "errorTxNotFound": "We haven't found that transaction yet. Wait a moment and try again.",
         "errorTxReverted": "That transaction failed on-chain.",
-        "errorNoTransfer": "No USDT transfer found in that transaction.",
-        "errorWrongRecipient": "That USDT transfer didn't go to the educator's wallet.",
+        "errorNoTransfer": "No USDT transfer was found in that transaction.",
+        "errorWrongRecipient": "That USDT transfer didn't reach the educator's wallet.",
         "errorWrongSender": "That USDT transfer wasn't sent from your wallet.",
         "errorInsufficientAmount": "You sent less USDT than this stage requires.",
-        "errorAlreadyUsed": "That transaction was already used for another payment.",
-        "errorMissingPrice": "This class has no price set — ask the educator to set one first.",
-        "errorGeneric": "The payment couldn't be verified. Try again or upload proof manually."
+        "errorAlreadyUsed": "That transaction has already been used for another payment.",
+        "errorMissingPrice": "This class has no price configured — ask the educator to set one first.",
+        "errorGeneric": "The payment couldn't be verified. Try again or upload the proof manually."
       }
     }
   },
@@ -306,20 +304,24 @@
   },
   "recruiterDashboard": {
     "title": "Recruiter Dashboard",
-    "subtitle": "Manage your talents efficiently and track their progress.",
-    "welcome": "Welcome back,",
+    "subtitle": "Manage your talents efficiently and keep track of them.",
+    "welcome": "Welcome,",
     "totalCandidates": "Total Candidates",
-    "talentsAvailable": "Talents on Platform",
+    "talentsAvailable": "Talents on the Platform",
     "walletLabel": "WALLET",
+<<<<<<< HEAD
     "Jobs" : "Jobs",
     "Vacancies": "My vacancies",
     "logout": "Logout",
+=======
+    "logout": "Log out",
+>>>>>>> upstream/main
     "recruiterFallback": "Recruiter",
-    "errorLoad": "Failed to load talents.",
+    "errorLoad": "Error loading talents.",
     "errorLoadHint": "Please try again in a few moments.",
     "registered": "Registered:",
     "admin": "Admin",
-    "adminPanel": "Administration Panel",
+    "adminPanel": "Admin Panel",
     "noTalents": "No talents found",
     "noTalentsHint": "New talents will appear here once they register on the platform.",
     "certificate_one": "{{count}} Certificate",
@@ -335,51 +337,51 @@
     "reapplySuccess": "Request sent",
     "reapplySuccessDesc": "Your account is back to pending review.",
     "reapplyError": "Error",
-    "reapplyErrorDesc": "Could not send the request.",
-    "welcome": "Welcome back,",
+    "reapplyErrorDesc": "The request could not be sent.",
+    "welcome": "Welcome,",
     "certificatesIssued": "Certificates Issued",
-    "talentsAvailable": "Talents on Platform",
+    "talentsAvailable": "Talents on the Platform",
     "roleLabel": "Role",
     "walletLabel": "Wallet Address",
     "emailLabel": "Email",
     "roleName": "Educator",
-    "logout": "Logout",
+    "logout": "Log out",
     "noneYet": "None yet",
     "formTitle": "Details",
-    "formSubtitle": "Fill in the certificate information below.",
-    "classRequestCertificateNotice": "This certificate comes from a completed class. Some fields were filled in automatically and can't be edited.",
+    "formSubtitle": "Fill in the certificate information.",
+    "classRequestCertificateNotice": "This certificate comes from a completed class. Some fields were filled in automatically and cannot be modified.",
     "fieldCertTitle": "Certificate Title",
     "fieldCertTitlePlaceholder": "e.g. Master of Blockchain 2024",
     "fieldTalentName": "Talent Name",
     "selectTalent": "Select a talent",
-    "selectedWallet": "Selected Wallet:",
+    "selectedWallet": "Selected wallet:",
     "selectedWalletNone": "None",
     "fieldIssuer": "Issuer",
     "fieldIssuerPlaceholder": "Organization",
     "fieldDate": "Date",
     "fieldType": "Type / Subtitle",
     "fieldTypePlaceholder": "e.g. Certificate of Excellence",
-    "fieldLogo": "Logo Upload",
+    "fieldLogo": "Upload Logo",
     "chooseFile": "Choose file",
     "noFileChosen": "No file chosen",
-    "usingProfileLogo": "Using your profile's logo. Change it from your profile settings.",
-    "personalizedClassType": "Personalized Class",
+    "usingProfileLogo": "Using your profile's logo. You can change it from your profile settings.",
+    "personalizedClassType": "Custom Class",
     "creating": "Creating...",
     "createCertificate": "Create Certificate",
     "preview": "Preview",
     "livePreview": "Live Preview",
     "reviewTitle": "Review before Minting",
     "reviewDesc": "This is exactly how the NFT metadata will appear. Once minted, the details are immutable on the blockchain.",
-    "noWallet": "No wallet found. Please login.",
+    "noWallet": "No wallet found. Please sign in.",
     "fillFields": "Please fill in all required fields.",
     "processing": "Processing...",
     "processingDesc": "Generating certificate image and uploading to IPFS...",
-    "mintSuccess": "Successfully Minted!",
-    "mintSuccessDesc": "The certificate is now live on the blockchain with traits.",
+    "mintSuccess": "Successfully minted!",
+    "mintSuccessDesc": "The certificate is now live on the blockchain with its attributes.",
     "downloadSuccess": "Downloaded!",
     "downloadSuccessDesc": "Certificate preview downloaded successfully.",
-    "downloadError": "Failed to download certificate preview.",
-    "errorLoad": "Failed to load talent list.",
+    "downloadError": "Failed to download the certificate preview.",
+    "errorLoad": "Failed to load the talent list.",
     "errorUnexpected": "An unexpected error occurred",
     "duplicateTitle": "This certificate already exists",
     "duplicateDescPrefix": "An identical certificate was already issued to this talent on",
@@ -393,12 +395,12 @@
     "title2": "Professional Certification",
     "description": "Choose your role and start your journey with blockchain-verified certificates in any professional field or skill area.",
     "talent": {
-      "title": "Talent",
-      "desc": "Learn any skill and earn blockchain-verified certificates",
+      "title": "I'm Talent",
+      "desc": "Learn any skill and earn blockchain-verifiable certificates",
       "p1": "Earn NFT certificates",
-      "p2": "Build verifiable skill portfolio",
+      "p2": "Build a verifiable portfolio",
       "p3": "Connect with recruiters",
-      "btn": "Join as Talent"
+      "btn": "Sign up as Talent"
     },
     "educator": {
       "title": "Educator",
@@ -410,70 +412,70 @@
     },
     "recruiter": {
       "title": "Recruiter",
-      "desc": "Find and verify top talent across all industries with confidence",
+      "desc": "Find and verify the best talent across all industries with confidence",
       "p1": "Search verified talent",
       "p2": "Verify skill certificates",
       "p3": "Advanced filtering tools",
       "btn": "Join as Recruiter"
     },
     "alreadyHave": "Already have an account?",
-    "signInInstead": "Sign In Instead"
+    "signInInstead": "Sign In"
   },
   "registerUser": {
     "back": "Back to Register",
     "title1": "Join the Future of",
     "title2": " Professional Certification",
-    "desc": "Create your talent account and start earning blockchain-verified certificates that prove your expertise in any professional field.",
+    "desc": "Create your talent account and start earning blockchain-verified certificates that showcase your expertise in any field.",
     "expTitle": "Talent Experience",
-    "expDesc": "Join thousands of talents earning blockchain-verified certificates across all professional fields and skills.",
-    "p1": "Complete professional courses in any field",
-    "p2": "Earn NFT certificates that prove your skills",
+    "expDesc": "Join thousands of talents earning certificates across every professional field.",
+    "p1": "Complete courses in any field",
+    "p2": "Earn NFT certificates for your skills",
     "p3": "Build a verifiable professional portfolio",
     "p4": "Connect directly with top recruiters",
     "already": "Already have an account?",
-    "signIn": "Sign In Instead",
+    "signIn": "Sign In",
     "formTitle": "Create Talent Account",
-    "formDesc": "Enter your information to get started with Hack Chain"
+    "formDesc": "Enter your information to get started"
   },
   "registerEducator": {
     "back": "Back to Register",
     "title1": "Empower the Next",
     "title2": "Generation of Professionals",
-    "desc": "Join as an educator and issue blockchain-verified certificates that prove talent achievements in any field - from technology and business to arts and sciences.",
+    "desc": "Join as an educator and issue verified certificates to prove talent achievements in any field.",
     "expTitle": "Educator Experience",
-    "expDesc": "Issue tamper-proof blockchain certificates and build trust with industry partners through verifiable credentials.",
-    "p1": "Issue blockchain-secured certificates",
-    "p2": "Track talent progress and achievements",
-    "p3": "Build institutional trust with recruiters",
+    "expDesc": "Issue immutable certificates and build trust through verifiable credentials.",
+    "p1": "Issue blockchain-backed certificates",
+    "p2": "Track talent progress",
+    "p3": "Build institutional trust",
     "p4": "White-label customization available",
     "b1Title": "Issue Certificates",
-    "b1Desc": "Blockchain-verified credentials",
+    "b1Desc": "Blockchain credentials",
     "b2Title": "Manage Talents",
     "b2Desc": "Centralized dashboard",
     "already": "Already have an account?",
-    "signIn": "Sign In Instead",
+    "signIn": "Sign In",
     "formTitle": "Create Educator Account",
-    "formDesc": "Enter your information to start issuing verified certificates"
+    "formDesc": "Enter your information to start issuing certificates"
   },
   "registerRecruiter": {
     "back": "Back to Register",
     "title1": "Find and Verify",
     "title2": "Top Professional Talent",
-    "desc": "Join as a recruiter and access the world's largest platform for verified professionals across all industries with blockchain-authenticated skills.",
+    "desc": "Join as a recruiter and access the largest platform for verified professionals.",
     "expTitle": "Recruiter Experience",
-    "expDesc": "Connect with certified professionals across all industries and verify their skills with confidence.",
-    "p1": "Access verified talent pool",
-    "p2": "Verify blockchain certificates instantly",
-    "p3": "Advanced search and filtering tools",
-    "p4": "Direct contact with top candidates",
+    "expDesc": "Connect with certified professionals and verify their skills with confidence.",
+    "p1": "Access verified talent",
+    "p2": "Verify certificates instantly",
+    "p3": "Advanced search and filters",
+    "p4": "Direct contact with candidates",
     "b1Title": "Smart Search",
-    "b1Desc": "Find ideal candidates in seconds",
+    "b1Desc": "Candidates in seconds",
     "b2Title": "Verified Skills",
     "b2Desc": "Blockchain-authenticated",
     "already": "Already have an account?",
-    "signIn": "Sign In Instead",
+    "signIn": "Sign In",
     "formTitle": "Create Recruiter Account",
-    "formDesc": "Enter your information to start finding top talent"
+    "formDesc": "Enter your information to search for talent"
   },
   "registrationForm": {
     "success": "Account created successfully!",
@@ -483,57 +485,57 @@
     "lastNameLabel": "Last Name",
     "lastNamePlaceholder": "Enter your last name",
     "emailLabel": "Email",
-    "emailPlaceholder": "Enter your email address",
+    "emailPlaceholder": "Enter your email",
     "creating": "Creating Account...",
     "create": "Create Account"
   },
   "educatorForm": {
-    "success": "Educator registered successfully!",
-    "registerAnother": "Register Another User",
+    "success": "Institution registered successfully!",
+    "registerAnother": "Register Another Institution",
     "nameLabel": "Name",
     "namePlaceholder": "Enter your name",
     "websiteLabel": "Website",
     "websitePlaceholder": "https://www.example.edu",
-    "emailLabel": "Official Email",
-    "emailPlaceholder": "Enter your email address",
-    "creating": "Creating Account...",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "creating": "Registering Institution...",
     "create": "Create Account"
   },
   "recruiterForm": {
     "success": "Company registered successfully!",
-    "registerAnother": "Register Another User",
+    "registerAnother": "Register Another Company",
     "nameLabel": "Company Name",
-    "namePlaceholder": "Enter company name",
+    "namePlaceholder": "Enter the company name",
     "industryLabel": "Industry",
     "industryPlaceholder": "e.g. Technology, Finance, Healthcare",
     "emailLabel": "Work Email",
     "emailPlaceholder": "name@company.com",
-    "creating": "Creating Account...",
+    "creating": "Registering Company...",
     "create": "Create Account"
   },
   "faq": {
-    "title": "Frequently Asked",
-    "titleHighlight": "Questions",
+    "title": "Frequently",
+    "titleHighlight": "Asked Questions",
     "items": [
       {
         "question": "What is HackChain?",
-        "answer": "HackChain is an educational-labor ecosystem that links Talent, Educators, and Recruiters in order to promote constant learning and transparency in recruitment processes."
+        "answer": "HackChain is an educational-professional ecosystem that connects Talent, Educators, and Recruiters to promote constant learning and transparency in recruitment processes."
       },
       {
         "question": "What is a tokenized certificate?",
-        "answer": "A tokenized certificate is an NFT that contains all the information of a traditional certificate. This NFT is immutable, non-transferable, unforgeable and can only be owned by one person — one Talent."
+        "answer": "A tokenized certificate is an NFT that holds all the information of a traditional certificate. This NFT is immutable, non-transferable, unforgeable, and can only be owned by one person — one Talent."
       },
       {
-        "question": "What benefits do I get if I register as Talent?",
-        "answer": "You will own a portfolio of certificates to share at any time and will have access to a large number of courses, conferences, and more from Educators in different areas of knowledge."
+        "question": "What benefits do I get by signing up as Talent?",
+        "answer": "You'll own a portfolio of certificates you can share at any time, and you'll have access to a wide range of courses, lectures, and more from Educators across different fields of knowledge."
       },
       {
-        "question": "What benefits do I get if I register as Educator?",
-        "answer": "Educators can issue certificates to any Talent within the ecosystem quickly and make their educational material known to each of them."
+        "question": "What benefits do I get by signing up as Educator?",
+        "answer": "Educators can issue certificates to any Talent within the ecosystem quickly, and get their educational material in front of them."
       },
       {
-        "question": "What benefits do I get if I register as Recruiter?",
-        "answer": "As a Recruiter you can view all Talents within HackChain and the certificates they hold, to strategically offer a job vacancy to the best candidate."
+        "question": "What benefits do I get by signing up as Recruiter?",
+        "answer": "As a Recruiter, you can view every Talent within HackChain and the certificates they hold, so you can strategically offer a job opening to the best candidate."
       }
     ]
   },
@@ -548,11 +550,11 @@
     "roleRecruiter": "Recruiter",
     "stillQuestions": "Still have questions?",
     "directTitle": "Write to us directly",
-    "directSubtitle": "We read every message. Usually respond within 24 hours.",
+    "directSubtitle": "We read every message. We usually reply within 24 hours.",
     "emailLabel": "Email",
     "emailPlaceholder": "your@email.com",
     "messageLabel": "Message",
-    "messagePlaceholder": "Tell us how we can help you...",
+    "messagePlaceholder": "Tell us how we can help...",
     "sendBtn": "Send Message",
     "emailSubject": "Contact via HackChain",
     "emailFrom": "From",
@@ -564,78 +566,77 @@
         "email": "contacto@hackchain.app",
         "desc": "General information about HackChain.",
         "subject": "General Inquiry - HackChain",
-        "body": "Hello HackChain team,\n\nI would like to get more information about..."
+        "body": "Hi HackChain team,\n\nI'd like to get more information about..."
       },
       "colaboraciones": {
         "email": "colaboraciones@hackchain.app",
-        "desc": "Teamwork with projects, brands, communities, people, etc.",
+        "desc": "Teaming up on projects, brands, communities, people, etc.",
         "subject": "Collaboration Proposal",
-        "body": "Hello,\n\nI am reaching out to propose a collaboration regarding...\n\nProposal details:"
+        "body": "Hi,\n\nI'm reaching out to propose a collaboration related to...\n\nProposal details:"
       },
       "soporte": {
         "email": "soporte@hackchain.app",
-        "desc": "Troubleshooting issues with the page or token.",
+        "desc": "Troubleshooting issues with the site or the token.",
         "subject": "Support Request",
-        "body": "Hello Support,\n\nI am experiencing the following issue:\n\n[Describe your problem here, attach screenshots if possible]"
+        "body": "Hi Support,\n\nI'm running into the following issue:\n\n[Describe your problem here, include screenshots if possible]"
       },
       "talentos": {
         "email": "talentos@hackchain.app",
-        "desc": "Questions about events, benefits, or the community.",
+        "desc": "Questions about events, perks, or the community.",
         "subject": "Talent / Community Questions",
-        "body": "Hello,\n\nI am a Talent on HackChain and I have the following question:\n\n"
+        "body": "Hi,\n\nI'm a Talent on HackChain and I have the following question:\n\n"
       },
       "educadores": {
         "email": "educadores@hackchain.app",
-        "desc": "Questions about events, benefits, or the community.",
+        "desc": "Questions about events, perks, or the community.",
         "subject": "Educator Inquiry",
-        "body": "Hello,\n\nI am an Educator (or interested in becoming one) and I would like to know:\n\n"
+        "body": "Hi,\n\nI'm an Educator (or interested in becoming one) and I'd like to know:\n\n"
       },
       "reclutadores": {
         "email": "reclutadores@hackchain.app",
-        "desc": "Questions about events, benefits, or the community.",
+        "desc": "Questions about events, perks, or the community.",
         "subject": "Recruiter Inquiry",
-        "body": "Hello,\n\nI represent a company/I am a recruiter and I am interested in knowing more about how to find talent:\n\n"
+        "body": "Hi,\n\nI represent a company / I'm a recruiter and I'm interested in learning more about finding talent:\n\n"
       },
       "bugbounty": {
         "email": "bugbounty@hackchain.app",
-        "desc": "Bounty program for identifying bugs and errors.",
+        "desc": "Bug bounty program.",
         "subject": "Vulnerability Report - Bug Bounty",
         "body": "Security Team,\n\nI have identified a bug/vulnerability on the platform. Details below:\n\n- What happened:\n- Steps to reproduce:\n- URL where it occurred:\n\n[Attach any evidence]"
       }
     }
   },
   "partner": {
-    "text": "HackChain is advised by Token Consulting Group. Comprehensive consulting specialized in tokenization projects."
+    "text": "HackChain is advised by Token Consulting Group. Full-service consulting specialized in tokenization projects."
   },
   "marquee": {
-    "eyebrow": "Universal access",
-    "wallets": "Compatible with 400+ wallets",
-    "title1": "Sign in with ",
-    "title2": "any wallet",
-    "subtitle": "Bring your existing wallet — no new account, no extra password. We sign you in with the same key you already use to manage your assets.",
-    "stat1": "400+ wallets",
-    "stat2": "WalletConnect v2",
-    "stat3": "One-tap sign-in"
+    "eyebrow": "A connected ecosystem",
+    "title1": "Everything revolves ",
+    "title2": "around you",
+    "subtitle": "Talent, educators, and recruiters connected in one cycle: learning, teaching, rating, and growing together.",
+    "stat1": "Certified talent",
+    "stat2": "Verified educators",
+    "stat3": "Instant match"
   },
   "educatorLanding": {
     "eyebrow": "Educator dashboard",
     "title1": "Create certificates in ",
     "title2": "minutes",
-    "subtitle": "Issue verifiable credentials from your panel: load data, set requirements, and publish with a simple guided flow.",
-    "detail": "Keep cohorts, templates, and evidence in one place. Every certificate is traceable, share-ready, and verifiable in seconds. You can also manage revocations and updates without losing history.",
+    "subtitle": "Issue verifiable credentials from your dashboard: load data, set requirements, and publish through a simple, guided flow.",
+    "detail": "Keep cohorts, templates, and evidence all in one place. Every certificate is traceable, ready to share, and verifiable in seconds. You can also manage revocations and updates without losing history.",
     "point1": "Fast setup",
     "point2": "Instant validation",
     "point3": "Secure delivery"
   },
   "metamask": {
     "modalTitle": "MetaMask Required",
-    "modalDesc": "HackChain requires a Web3 wallet to operate safely. Please install MetaMask to register and continue.",
+    "modalDesc": "HackChain needs a Web3 wallet to operate securely. Please install MetaMask to register and continue.",
     "cancel": "Cancel",
     "downloadBtn": "Download MetaMask"
   },
   "cookieBanner": {
     "title": "Privacy & Cookies",
-    "desc1": "We use first and third-party cookies to improve your experience, analyze the use of our Web3 infrastructure, and personalize content. You can accept all cookies, reject them, or set your preferences. For more details, check our ",
+    "desc1": "We use our own and third-party cookies to improve your experience, analyze the use of our Web3 infrastructure, and personalize content. You can accept all cookies, reject them, or set your preferences. For more details, see our ",
     "policyLink": "Cookie Policy",
     "reject": "Reject",
     "config": "Preferences",
@@ -645,7 +646,7 @@
     "whatIs": "What is Hack Token?",
     "heroTitle1": "HACK ",
     "heroTitle2": "Token",
-    "heroTagline": "HackChain is the infrastructure powering the educational and labor sector through the HACK token ecosystem.",
+    "heroTagline": "HackChain is the infrastructure powering the education and employment sector through our HACK token ecosystem.",
     "totalSupply": "Total Supply",
     "totalSupplyValue": "1,000,000,000 HACK",
     "network": "Network",
@@ -654,13 +655,13 @@
     "standardValue": "ERC-20",
     "ecosystemTitle": "HACK for the ",
     "ecosystemHighlight": "Ecosystem",
-    "ecosystemDesc": "The economy behind the HackChain Token, or HACK token, is designed so that Talents, Educators, and Recruiters are rewarded for their merits in the short, medium, and long term.",
+    "ecosystemDesc": "The economy behind the HackChain Token, or HACK token, is designed so that Talent, Educators, and Recruiters are rewarded for their merits in the short, medium, and long term.",
     "ecosystemBullets": [
       "Reward Talent, Educators, and Recruiters for their merits",
-      "Power a transparent and trustless credential economy",
+      "Drive a transparent, intermediary-free credential economy",
       "Grow a community-driven education ecosystem in LATAM"
     ],
-    "objectivesTitle": "Token HACK Objectives",
+    "objectivesTitle": "HACK Token Objectives",
     "objCommunityLabel": "Community Growth",
     "objCommunityDesc": "Empower every participant in our ecosystem",
     "objPlatformLabel": "Platform Development",
@@ -668,35 +669,35 @@
     "objUserLabel": "User Engagement",
     "objUserDesc": "Reward and retain the most committed members",
     "forTalent": "For Talent",
-    "talentPerk1": "Earn Token HACK for completing courses",
-    "talentPerk2": "Spend Token HACK on premium certifications",
-    "talentPerk3": "Priority access to job postings",
+    "talentPerk1": "Earn HACK Token for completing courses",
+    "talentPerk2": "Use HACK Token on premium certifications",
+    "talentPerk3": "Priority access to job openings",
     "forEducators": "For Educators",
-    "educatorPerk1": "Receive Token HACK for issued certificates",
-    "educatorPerk2": "Access educator-only governance tools",
-    "educatorPerk3": "Expand your student reach",
+    "educatorPerk1": "Receive HACK Token for issuing certificates",
+    "educatorPerk2": "Access to exclusive governance tools",
+    "educatorPerk3": "Expand your reach to more students",
     "forRecruiters": "For Recruiters",
-    "recruiterPerk1": "Use Token HACK to unlock talent profiles",
+    "recruiterPerk1": "Use HACK Token to unlock talent profiles",
     "recruiterPerk2": "Verify credentials in one click",
-    "recruiterPerk3": "Access exclusive talent pool",
+    "recruiterPerk3": "Access to an exclusive talent pool",
     "talentTitle": "Talent",
-    "talentDesc": "Turn learning into your main advantage to be part of that company you desire so much; we back your experience so you have the best possibilities.",
+    "talentDesc": "Turn learning into your greatest advantage to become part of that company you've always wanted; we back your experience so you have the best possible chances.",
     "educatorTitle": "Educator",
-    "educatorDesc": "Share knowledge with everyone. Your teachings help Students land their first job and keep Professionals always up to date.",
+    "educatorDesc": "Share knowledge with everyone. Your teaching helps Students land their first job and helps Professionals stay always up to date.",
     "recruiterTitle": "Recruiter",
-    "recruiterDesc": "You are the link between Talent and the companies seeking it. Be a pioneer of a more efficient and transparent recruitment process.",
+    "recruiterDesc": "You're the link between Talent and the companies looking for it. Be a pioneer of a more effective and transparent recruitment process.",
     "communityTitle": "HACK for the ",
     "communityHighlight": "Community",
-    "communityDesc": "A united community is a strong community. You can show your support for HackChain by gifting HACK token cards to your friends and family so they can request training or recorded educational material from Educators.",
-    "communitySlogan": "There is Talent, it just needs support.",
+    "communityDesc": "A united community is a strong community. You can show your support for HackChain by gifting HACK token cards to friends and family so they can request training or recorded educational material from Educators.",
+    "communitySlogan": "There's Talent, it just needs support.",
     "financeTitle": "HACK for ",
     "financeHighlight": "Finance",
     "referralTitle": "Referral Program",
-    "referralDesc": "You can earn HACK through the referral system where we reward your initiative to spread the word about HackChain to other people in your city, region, or country.",
+    "referralDesc": "You can earn HACK through the referral system, where we reward you for spreading the word about HackChain to people in your city, region, or country.",
     "stakingTitle": "Staking",
-    "stakingDesc": "Generate returns through staking; you earn HACK by locking your HACK for a determined period of time.",
+    "stakingDesc": "Generating returns is possible through staking; you earn HACK by locking your HACK for a set period of time.",
     "privateSaleTitle": "Private Sale",
-    "privateSaleDesc": "Have capital and want to play an important role in HackChain's development? Contact us via email. Access a private token sale with a preferential price.",
+    "privateSaleDesc": "Do you have capital and want to play an important role in HackChain's development? Reach out via email. You can access a private token sale at a preferential price.",
     "privateSaleCta": "Contact Us",
     "distributionTitle": "Token ",
     "distributionHighlight": "Distribution",
@@ -713,7 +714,7 @@
     "whitepaperSubtext": "Explore the full technical and economic details of the HACK token",
     "ctaTitle": "Be a pioneer in ",
     "ctaHighlight": "LATAM",
-    "ctaDesc": "We will be the leaders in educational and labor sector infrastructure in Mexico and Latin America."
+    "ctaDesc": "We will be the leaders in education and employment infrastructure across Mexico and Latin America."
   },
   "verifyEmail": {
     "stepLabel": "Final activation step",
@@ -736,7 +737,7 @@
     "requestNew": "Request new link",
     "errorLabel": "Verification error",
     "errorTitle": "Invalid token",
-    "errorDesc": "The link has already been used or is not valid.",
+    "errorDesc": "The link was already used or is not valid.",
     "backToLogin": "Back to login"
   },
   "editProfile": {
@@ -760,18 +761,18 @@
     "bioPlaceholder": "Tell talents what you teach, your background, and what makes you stand out…",
     "bioPlaceholderTalent": "Tell educators about your achievements, background, and what makes you stand out…",
     "bioChars": "characters",
-    "brandingTitle": "Certificate Branding",
-    "brandingDescription": "Customize the logo displayed on your issued certificates.",
+    "brandingTitle": "Certificate Identity",
+    "brandingDescription": "Customize the logo that will appear on the certificates you issue.",
     "certificateLogo": "Certificate Logo",
-    "certificateLogoHelp": "This logo will appear on every certificate you issue. For the best results, use a square image with a transparent background. Click the logo area to upload one.",
-    "upload": "Upload",
+    "certificateLogoHelp": "This logo will appear on every certificate you issue. For best results, use a square image with a transparent background. Click the logo box to select an image.",
     "logo": "Logo",
+    "upload": "Upload",
     "changeLogo": "Change logo",
     "removeLogo": "Remove logo",
-    "areasSection": "Expertise",
+    "areasSection": "Areas of Expertise",
     "photoHint": "Click to upload photo",
     "missingDialogTitle": "Your profile is incomplete",
-    "missingDialogDesc": "You're missing the following sections:",
+    "missingDialogDesc": "The following sections are missing:",
     "keepEditing": "Keep editing",
     "saveAnyway": "Save anyway",
     "optimizing": "Optimizing…",
@@ -782,64 +783,65 @@
     "roleLabel": "Role",
     "educatorRole": "Educator",
     "talentRole": "Talent",
-    "fieldOfStudyLabel": "Field of study",
     "missingOrgTitle": "Organization name",
+    "fieldOfStudyLabel": "Field of study",
+    "fieldOfStudyPlaceholder": "e.g. Software Engineering",
+    "missingNameTitle": "Full name",
+    "missingNameDesc": "educators and recruiters need to know who you are.",
     "missingOrgDesc": "recruiters and talents need to know who you are.",
-    "missingNameTitle": "Name",
-    "missingNameDesc": "recruiters and educators need to know who you are.",
     "missingBioTitle": "Bio",
     "missingBioDesc": "tell talents about your background and what you teach.",
-    "missingAreasTitle": "Knowledge areas",
-    "missingAreasDesc": "help talents find you by your expertise.",
+    "missingAreasTitle": "Areas of expertise",
+    "missingAreasDesc": "help talents find you by your experience.",
     "missingPhotoTitle": "Profile photo",
-    "missingPhotoDesc": "profiles with a photo get significantly more views.",
+    "missingPhotoDesc": "profiles with a photo get far more views.",
     "completeProfileHint": "A complete profile gets more visibility with talents and recruiters.",
-    "savedChangesNote": "Saved changes are reflected on your public profile immediately.",
+    "savedChangesNote": "Saved changes are reflected on your public profile right away.",
     "areasHint": "The areas you teach appear on your public profile and help talents find you.",
     "linksSection": "Connections",
-    "linksHint": "Add external links so talents and recruiters can learn more about you beyond the platform.",
+    "linksHint": "Add external links so talents and recruiters can get to know you beyond the platform.",
     "githubLabel": "GitHub",
-    "githubPlaceholder": "https://github.com/tuusuario",
+    "githubPlaceholder": "https://github.com/yourusername",
     "linkedinLabel": "LinkedIn",
-    "linkedinPlaceholder": "https://linkedin.com/in/yourhandle",
+    "linkedinPlaceholder": "https://linkedin.com/in/yourusername",
     "twitterLabel": "X / Twitter",
-    "twitterPlaceholder": "https://x.com/yourhandle",
+    "twitterPlaceholder": "https://x.com/yourusername",
     "instagramLabel": "Instagram",
-    "instagramPlaceholder": "https://instagram.com/tuusuario",
-    "invalidUrl": "One of the links is not a valid URL. Please review before saving.",
+    "instagramPlaceholder": "https://instagram.com/yourusername",
+    "invalidUrl": "One of the links is not a valid URL. Check it before saving.",
     "classesTitle": "Edit classes",
-    "classesDesc": "Set your pricing, session duration, availability and calendar."
+    "classesDesc": "Price, duration, availability, and calendar for your classes."
   },
   "bookClass": {
     "backToProfile": "Back to profile",
-    "privateLessonWith": "Private lesson with",
+    "privateLessonWith": "Private class with",
     "priceLabel": "Price",
     "availabilityTitle": "Choose a time slot",
     "durationLabel": "Session duration",
     "min": "min",
-    "selectDay": "Select a day",
+    "selectDay": "Select the day",
     "prevDay": "Previous day",
     "nextDay": "Next day",
-    "selectSlot": "Available slots",
+    "selectSlot": "Available times",
     "noSlots": "No slots available for this format on that day.",
-    "slotUnavailable": "Slot unavailable — already booked.",
-    "noAvailability": "This educator has no availability configured.",
-    "notAvailable": "Booking page is not available.",
-    "calendarTitle": "Educator calendar",
-    "comingSoon": "Soon",
-    "comingSoonTitle": "Booking coming soon",
-    "comingSoonHint": "We're building the booking system. For now, you can contact the educator directly from their profile.",
+    "slotUnavailable": "Time slot unavailable — already booked.",
+    "noAvailability": "This educator hasn't set up availability.",
+    "notAvailable": "The booking page isn't available.",
+    "calendarTitle": "Educator's calendar",
+    "comingSoon": "Coming soon",
+    "comingSoonTitle": "Bookings coming soon",
+    "comingSoonHint": "We're working on the booking system. For now, you can contact the educator directly from their profile.",
     "selectClass": "Choose a class",
     "changeClass": "Change",
     "backToClasses": "Back to classes",
     "confirmTitle": "Your selection",
     "messageLabel": "Message (optional)",
-    "messagePlaceholder": "Tell the educator what you want to cover in the session...",
+    "messagePlaceholder": "Tell the educator what you'd like to work on in the session...",
     "confirmBtn": "Request class",
     "sending": "Sending...",
     "successTitle": "Request sent!",
     "successHint": "The educator will confirm your class shortly.",
-    "errorSubmit": "Could not send the request. Please try again."
+    "errorSubmit": "The request couldn't be sent. Please try again."
   },
   "editClasses": {
     "pageTitle": "Edit classes",
@@ -849,23 +851,23 @@
     "savedTitle": "Classes saved",
     "savedDesc": "Your class settings have been updated.",
     "errorTitle": "Error",
-    "approvalRequiredError": "Your account hasn't been approved by an admin yet.",
+    "approvalRequiredError": "Your account hasn't been approved by an administrator yet.",
     "notApprovedRedirectTitle": "Account under review",
-    "notApprovedRedirectDesc": "You'll be able to set up classes once an admin approves your account.",
-    "savedChangesNote": "Changes are reflected on your public profile immediately.",
-    "pricingSection": "Pricing",
-    "pricingHint": "Set your hourly rate. Per-session price is calculated automatically based on duration.",
+    "notApprovedRedirectDesc": "You'll be able to set up your classes once an administrator approves your account.",
+    "savedChangesNote": "Changes are reflected on your public profile right away.",
+    "pricingSection": "Price",
+    "pricingHint": "Set your hourly rate. The price per session is calculated automatically based on duration.",
     "hourlyRateLabel": "Hourly rate",
-    "perSessionBreakdown": "Per-session price",
+    "perSessionBreakdown": "Price per session",
     "min": "min",
     "acceptUsdt": "Accept USDT",
-    "acceptUsdtHint": "Talents can pay with USDT directly from their wallet.",
-    "invalidRate": "Rate must be a number between 0 and 9999.",
+    "acceptUsdtHint": "Talents will be able to pay with USDT directly from their wallet.",
+    "invalidRate": "The rate must be a number between 0 and 9999.",
     "durationSection": "Duration",
-    "durationHint": "Choose the session formats you offer. You can select multiple.",
+    "durationHint": "Choose the class formats you offer. You can select more than one.",
     "selectAtLeastOne": "Select at least one duration.",
     "availabilitySection": "Availability",
-    "availabilityHint": "Toggle days and time ranges when you are available to teach.",
+    "availabilityHint": "Turn on the days and time ranges when you're available to teach.",
     "dayMon": "Mon",
     "dayTue": "Tue",
     "dayWed": "Wed",
@@ -875,14 +877,14 @@
     "daySun": "Sun",
     "startTime": "From",
     "endTime": "To",
-    "noAvailabilitySet": "Enable at least one day to show your availability.",
+    "noAvailabilitySet": "Turn on at least one day to show your availability.",
     "calendarSection": "Google Calendar",
     "calendarHint": "Paste your Google Calendar embed link so talents can see your real availability.",
     "calendarUrlLabel": "Embed URL",
     "calendarUrlPlaceholder": "https://calendar.google.com/calendar/embed?src=...",
-    "calendarUrlError": "URL must start with https://calendar.google.com/calendar/embed",
-    "invalidCalendarUrl": "The calendar URL is not valid.",
-    "calendarInstructionsTitle": "How to get the link",
+    "calendarUrlError": "The URL must start with https://calendar.google.com/calendar/embed",
+    "invalidCalendarUrl": "The calendar URL isn't valid.",
+    "calendarInstructionsTitle": "How do I get the link?",
     "calendarInstructions": [
       "Open Google Calendar in your browser.",
       "Click the three dots next to the calendar you want to share.",
@@ -893,12 +895,12 @@
     "showPreview": "Show calendar preview",
     "hidePreview": "Hide preview",
     "noDurations": "Select at least one session duration.",
-    "invalidTimeRange": "Check the schedules: start must be before end for every enabled day.",
-    "invalidTimeRangeInline": "Start time must be before end time.",
+    "invalidTimeRange": "Check the schedules: the start time must be before the end time for every enabled day.",
+    "invalidTimeRangeInline": "The start time must be before the end time.",
     "catalogSection": "My classes",
-    "catalogHint": "Define the classes you teach. Talents will choose one before booking a slot.",
+    "catalogHint": "Define the classes you offer. The talent will choose one before booking a time slot.",
     "catalogLoading": "Loading classes...",
-    "catalogEmpty": "No classes yet. Add your first one.",
+    "catalogEmpty": "You don't have any classes yet. Add your first one.",
     "catalogAddClass": "Add class",
     "catalogAddBtn": "Add",
     "catalogCancelBtn": "Cancel",
@@ -912,13 +914,13 @@
     "catalogDelete": "Delete"
   },
   "classInbox": {
-    "title": "Class requests",
+    "title": "Class Requests",
     "loading": "Loading requests...",
-    "empty": "No class requests yet.",
+    "empty": "You don't have any class requests right now.",
     "min": "min",
     "confirm": "Confirm",
     "cancel": "Cancel",
-    "complete": "Complete",
+    "complete": "Completed",
     "status": {
       "pending": "Pending",
       "confirmed": "Confirmed",
@@ -929,22 +931,22 @@
       "confirmed": "Request confirmed",
       "cancelled": "Request cancelled",
       "completed": "Class marked as completed",
-      "error": "Could not update the request"
+      "error": "The request couldn't be updated"
     }
   },
   "deleteAccount": {
     "title": "Delete educator account",
     "warningPermanent": "permanent and irreversible",
     "descLine1": "This action is permanent and irreversible. Your account, profile, and all issued certificates will be removed from HackChain.",
-    "descLine2": "On-chain NFTs are immutable and will remain on the blockchain, but your educator authorization will be revoked.",
+    "descLine2": "NFTs on the blockchain are immutable and will remain on the network, but your authorization as an educator will be revoked.",
     "confirmLabel": "Type",
     "confirmSuffix": "to confirm",
     "cancel": "Cancel",
     "deleteBtn": "Delete my account",
-    "deleting": "Signing & deleting..."
+    "deleting": "Signing and deleting..."
   },
   "knowledgeAreas": {
-    "label": "Knowledge areas",
+    "label": "Areas of expertise",
     "searchPlaceholder": "Search areas...",
     "categorySecurity": "Cybersecurity",
     "categoryDevelopment": "Development",
@@ -955,7 +957,7 @@
   "since": "Since",
   "certificatesIssued": "Certificates issued",
   "talentsFormed": "Talents trained",
-  "comingSoonContent": "Courses & content — coming soon.",
+  "comingSoonContent": "Courses and content — coming soon.",
   "educatorProfile": {
     "aboutYouSection": "About you",
     "expertiseSection": "Expertise",
@@ -971,36 +973,36 @@
     "knowledgeAreasLimitDesc": "You can add up to 5 areas.",
     "yourOrganization": "Your organization",
     "toastProfileSavedTitle": "Profile saved",
-    "toastProfileSavedDesc": "Your public profile has been updated.",
+    "toastProfileSavedDesc": "Your public profile was updated.",
     "toastErrorDefault": "Something went wrong",
-    "errorUploadingPhoto": "Could not upload photo",
+    "errorUploadingPhoto": "The photo couldn't be uploaded",
     "toastErrorUploadingTitle": "Error uploading photo",
     "toastErrorTitle": "Error",
     "verifiedBadge": "Verified",
-    "aboutSection": "About this educator",
+    "aboutSection": "About the educator",
     "noBio": "This educator hasn't completed their bio yet.",
     "linksSection": "Connections",
     "websiteLabel": "Website",
     "linkedinLabel": "LinkedIn",
     "twitterLabel": "X / Twitter",
     "verificationSection": "On-chain verification",
-    "issuerWalletLabel": "Educator wallet",
+    "issuerWalletLabel": "Educator's wallet",
     "contractLabel": "HackCertificate contract",
     "viewOnExplorer": "View on explorer",
     "certificatesGalleryLabel": "Issued certificates",
-    "certificatesGalleryHint": "The latest certificates issued by this educator will appear here.",
+    "certificatesGalleryHint": "Here you'll be able to see the latest certificates issued by this educator.",
     "talentsListLabel": "Talents trained",
-    "talentsListHint": "Soon you'll be able to explore the talents certified by this educator.",
+    "talentsListHint": "Soon you'll be able to browse the talents certified by this educator.",
     "comingSoon": "Coming soon",
     "classesSection": "Available classes",
-    "classesPerHour": "/ hr",
+    "classesPerHour": "/ hour",
     "classesUsdtAccepted": "USDT accepted",
     "classesDurationFilter": "Duration",
     "classesMin": "min",
-    "classesNoAvailability": "This educator hasn't configured their availability yet.",
-    "classesCalendarTitle": "Educator calendar",
+    "classesNoAvailability": "This educator hasn't set up their availability yet.",
+    "classesCalendarTitle": "Educator's calendar",
     "classesBookSoon": "Booking coming soon",
-    "classesCta": "Private lessons",
+    "classesCta": "Private classes",
     "classesBookCta": "Request private class",
     "classesSessionFormats": "available formats"
   },
@@ -1010,9 +1012,9 @@
     "expertiseSection": "Expertise",
     "accountSection": "Account",
     "talentRoleLabel": "Talent",
-    "expertBadge": "Knowledge areas",
+    "expertBadge": "Area of expertise",
     "verifiedLabel": "Verified",
-    "verifiedTooltip": "Educator verified by HackChain",
+    "verifiedTooltip": "Talent verified by HackChain",
     "percentComplete": "% complete",
     "backToDashboard": "Back to dashboard",
     "uploadNewPhoto": "Upload new photo",
@@ -1021,28 +1023,28 @@
     "knowledgeAreasLimitDesc": "You can add up to 5 areas.",
     "yourOrganization": "Your organization",
     "toastProfileSavedTitle": "Profile saved",
-    "toastProfileSavedDesc": "Your public profile has been updated.",
+    "toastProfileSavedDesc": "Your public profile was updated.",
     "toastErrorDefault": "Something went wrong",
-    "errorUploadingPhoto": "Could not upload photo",
+    "errorUploadingPhoto": "The photo couldn't be uploaded",
     "toastErrorUploadingTitle": "Error uploading photo",
     "toastErrorTitle": "Error",
     "verifiedBadge": "Verified",
-    "aboutSection": "About this educator",
-    "noBio": "This educator hasn't completed their bio yet.",
+    "aboutSection": "About the talent",
+    "noBio": "This Talent hasn't completed their bio yet.",
     "linksSection": "Connections",
     "gitLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
     "twitterLabel": "X / Twitter",
     "instagramLabel": "Instagram",
     "verificationSection": "On-chain verification",
-    "issuerWalletLabel": "Educator wallet",
+    "issuerWalletLabel": "Talent's wallet",
     "contractLabel": "HackCertificate contract",
     "viewOnExplorer": "View on explorer",
-    "certificatesEarnedLabel": "Certificates earned",
+    "certificatesEarnedLabel": "Certificates Earned",
     "certificatesGalleryLabel": "Issued certificates",
-    "certificatesGalleryHint": "The latest certificates issued by this educator will appear here.",
+    "certificatesGalleryHint": "Here you'll be able to see the latest certificates issued by this educator.",
     "talentsListLabel": "Talents trained",
-    "talentsListHint": "Soon you'll be able to explore the talents certified by this educator.",
+    "talentsListHint": "Soon you'll be able to browse the talents certified by this educator.",
     "comingSoon": "Coming soon"
   },
   "referrals": {
@@ -1052,15 +1054,15 @@
     "viewAll": "View all",
     "comingSoon": {
       "title": "Staking is coming soon!",
-      "desc": "Soon your referrals will be able to stake and you'll start earning real rewards. Start referring now and build your network for Phase 2."
+      "desc": "Soon your referrals will be able to stake and you'll start earning real rewards. Start referring now and build your network ahead of Phase 2."
     },
     "shareCode": "Share your code",
-    "instructions": "Share this link. Your friend registers and stakes 1000 HACK for 30 days. You get 1000 HACK.",
+    "instructions": "Share this link. Your friend signs up and stakes 1000 HACK for 30 days. You get 1000 HACK.",
     "yourCode": "Your Code",
     "inviteLink": "Invite Link",
     "stats": {
       "totalEarned": "Total Earned",
-      "monthly": "Monthly Limit",
+      "monthly": "Monthly",
       "paymentsThisMonth": "Payments this month",
       "pending": "Pending",
       "paid": "Paid",
@@ -1071,7 +1073,7 @@
       "total": "Total:"
     },
     "empty": {
-      "title": "You have no referrals yet",
+      "title": "You don't have any referrals yet",
       "desc": "Share your invitation code to build your network and start earning rewards."
     },
     "table": {
@@ -1088,18 +1090,18 @@
     "viewProfile": "View profile of",
     "verified": "Verified",
     "certs": "certs",
-    "hasClasses": "Takes classes",
+    "hasClasses": "Teaches classes",
     "noEducators": "No educators available yet",
     "noResults": "No educators match your search",
     "allEducators": "All Educators",
-    "filterByArea": "Filter by knowledge area...",
+    "filterByArea": "Filter by area of expertise...",
     "searchEducators": "Search by name or area..."
   },
   "common": {
     "back": "Back",
     "prev": "Previous",
     "next": "Next",
-    "retry":"Retry"
+    "retry": "Retry"
   },
   "educatorClassRequests": {
     "title": "Class Requests",
@@ -1131,7 +1133,7 @@
       "issueCertificate": "Issue Certificate"
     },
     "topic": "Topic",
-    "cancelReasonPlaceholder": "Cancellation reason (optional)",
+    "cancelReasonPlaceholder": "Reason for cancellation (optional)",
     "confirmCancel": "Cancel this class?",
     "cancelYes": "Yes, cancel",
     "cancelNo": "No",
@@ -1158,7 +1160,7 @@
       "save": "Save",
       "cancel": "Cancel",
       "saved": "Link saved",
-      "error": "Couldn't save the link",
+      "error": "The link couldn't be saved",
       "errorHint": "Check that the link is valid and try again."
     }
   },
@@ -1168,19 +1170,19 @@
     "downloadIcs": "Download .ics",
     "today": "Today",
     "noEvents": "No classes on this day.",
-    "emptyTalent": "No classes scheduled yet. Explore educators and book your first session.",
-    "emptyEducator": "No classes scheduled yet.",
+    "emptyTalent": "You don't have any classes scheduled yet. Explore educators and book your first session.",
+    "emptyEducator": "You don't have any classes scheduled yet.",
     "myCalendar": "My Calendar"
   },
-    "share": {
-    "shareButton": "Share", 
+  "share": {
+    "shareButton": "Share",
     "title": "Share profile",
     "shareVia": "Share via",
-    "profileLink": "Profile Link",
-    "qrCode": "QR code",
+    "profileLink": "Profile link",
+    "qrCode": "QR Code",
     "retry": "Retry",
-    "couldNotLoadQr": "Couldn't load QR",
-    "scanProfile": "Scan to view profile of {{name}}"
+    "couldNotLoadQr": "The QR code couldn't be loaded",
+    "scanProfile": "Scan to view {{name}}'s profile"
   },
   "shareCertificate": {
   "title": "Share Certificate",

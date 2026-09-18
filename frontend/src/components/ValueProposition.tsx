@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import SectionDivider from '@/components/SectionDivider';
 
 const ValueProposition = () => {
   const { t } = useTranslation();
@@ -41,8 +42,14 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section id="community" className="pb-32 md:pb-48 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={sectionRef}>
+<section id="community" className="pt-8 pb-20 md:pb-32 relative snap-start snap-always">
+        {/* Section-tinted scrim over the global mosaic — teal accent */}
+      <div className="absolute inset-0 -z-10 bg-[#180528]/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#4BC6B9]/[0.06] via-transparent to-transparent" />
+
+      <SectionDivider position="top" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 md:mt-24" ref={sectionRef}>
 
         <motion.div
           className="text-center mb-24 md:mb-32"
@@ -62,7 +69,6 @@ const ValueProposition = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Luminous path — desktop horizontal */}
           <svg
             className="hidden lg:block absolute top-10 left-0 w-full h-32 pointer-events-none"
             viewBox="0 0 1200 120"
@@ -96,7 +102,6 @@ const ValueProposition = () => {
             />
           </svg>
 
-          {/* Luminous path — mobile vertical */}
           <svg
             className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 h-full w-32 pointer-events-none"
             viewBox="0 0 120 1000"
