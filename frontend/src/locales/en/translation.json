@@ -309,13 +309,9 @@
     "totalCandidates": "Total Candidates",
     "talentsAvailable": "Talents on the Platform",
     "walletLabel": "WALLET",
-<<<<<<< HEAD
     "Jobs" : "Jobs",
     "Vacancies": "My vacancies",
-    "logout": "Logout",
-=======
     "logout": "Log out",
->>>>>>> upstream/main
     "recruiterFallback": "Recruiter",
     "errorLoad": "Error loading talents.",
     "errorLoadHint": "Please try again in a few moments.",
