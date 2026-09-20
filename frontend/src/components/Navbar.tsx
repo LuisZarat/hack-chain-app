@@ -2,12 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ArrowRight, Home, Shield, Activity, Coins, Phone, Info } from 'lucide-react';
+import { Menu, X, ArrowRight, Home, Shield, Activity, Coins, Phone, Info, BriefcaseBusiness } from 'lucide-react';
 // @ts-ignore
 import anime from 'animejs/lib/anime.es.js';
 import { AnimatedButton } from './auth/AnimatedButton';
 import hackChainLogo from "/images/logoHackchain.webp";
 import { LanguageToggle } from './LanguageToggle';
+import { useAuth } from '@/contexts/AuthContext';
 import styles from '@/styles/navbar-effects.module.css';
 
 const Navbar = () => {
@@ -15,6 +16,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t } = useTranslation();
+  const { isAuthenticated } = useAuth();
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,6 +65,7 @@ const Navbar = () => {
     { id: '4', name: t('nav.tokenHack'), href: '/token', icon: Coins, color: 'text-yellow-400', tooltip: 'Tokenomics' },
     { id: '5', name: t('nav.contact'), href: '/contact', icon: Phone, color: 'text-green-400', tooltip: 'Get In Touch' },
     { id: '6', name: t('nav.about'), href: '/about', icon: Info, color: 'text-cyan-400', tooltip: 'What We Do' },
+    ...(isAuthenticated ? [{ id: '7', name: 'Empleos', href: '/jobs', icon: BriefcaseBusiness, color: 'text-emerald-300', tooltip: 'Explorar vacantes' }] : []),
   ];
 
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

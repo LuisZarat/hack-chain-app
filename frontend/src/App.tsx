@@ -48,6 +48,11 @@ const EducatorClassRequests = lazy(() => import("./pages/EducatorClassRequests")
 const CalendarPage = lazy(() => import("./pages/CalendarPage"));
 const TalentProfile = lazy(() => import("./pages/TalentProfile"));
 const EditTalentProfile = lazy(() => import("./pages/EditTalentProfile"));
+const Jobs = lazy(() => import("./pages/Jobs"));
+const JobDetail = lazy(() => import("./pages/JobDetail"));
+const MyApplications = lazy(() => import("./pages/MyApplications"));
+const RecruiterVacancies = lazy(() => import("./pages/RecruiterVacancies"));
+const VacancyApplicants = lazy(() => import("./pages/VacancyApplicants"));
 
 // Admin dashboard — lazy-loaded shell + 4 sub-pages. AdminRoute pings the
 // backend on mount to verify the wallet is in ADMIN_WALLETS; failed probe
@@ -96,6 +101,11 @@ const App = () => {
                 <Route path="/presale" element={<PresalePage />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/nft-creator" element={<NFTCreator />} />
+                <Route path="/jobs" element={<Jobs />} />
+                <Route path="/jobs/:slug" element={<JobDetail />} />
+                <Route path="/my-applications" element={<ProtectedRoute roles={['student']}><MyApplications /></ProtectedRoute>} />
+                <Route path="/recruiter/vacancies" element={<ProtectedRoute roles={['recruiter']}><RecruiterVacancies /></ProtectedRoute>} />
+                <Route path="/recruiter/vacancies/:id/applicants" element={<ProtectedRoute roles={['recruiter']}><VacancyApplicants /></ProtectedRoute>} />
 
                 {/* Protected routes — require authentication and role */}
                 <Route path="/educator/dashboard" element={

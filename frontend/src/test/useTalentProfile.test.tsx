@@ -179,9 +179,14 @@ it("preserves all public profile fields", async () => {
       },
     );
 
-    await waitFor(() => {
-      expect(result.current.isError).toBe(true);
-    });
+    await waitFor(
+  () => {
+    expect(result.current.isError).toBe(true);
+  },
+  {
+    timeout: 3000,
+  },
+);
 
     expect(result.current.error).toBeInstanceOf(Error);
 

@@ -13,7 +13,13 @@ vi.mock('react-router-dom', () => ({
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
-    t: (key: string) => key,
+    t: (key: string) => {
+      if (key === 'educatorDashboard.personalizedClassType') {
+        return 'Clase Personalizada';
+      }
+
+      return key;
+    },
     i18n: { language: 'es' },
   }),
 }));
@@ -43,18 +49,53 @@ vi.mock('@/components/ui/popover', () => ({
   PopoverContent: ({ children }: { children: ReactNode }) => <>{children}</>,
   PopoverTrigger: ({ children }: { children: ReactNode }) => <>{children}</>,
 }));
+vi.mock('@/components/ui/select', () => {
+  let selectDisabled = false;
 
-vi.mock('@/components/ui/select', () => ({
-  Select: ({ disabled }: { children: ReactNode; disabled?: boolean }) => (
-    <button type="button" role="combobox" disabled={disabled} />
-  ),
-  SelectContent: ({ children }: { children: ReactNode }) => <>{children}</>,
-  SelectItem: ({ children }: { children: ReactNode }) => <>{children}</>,
-  SelectTrigger: ({ disabled, children }: { disabled?: boolean; children: ReactNode }) => (
-    <button type="button" role="combobox" disabled={disabled}>{children}</button>
-  ),
-  SelectValue: ({ placeholder }: { placeholder?: string }) => <>{placeholder}</>,
-}));
+  return {
+    Select: ({
+      children,
+      disabled,
+    }: {
+      children: ReactNode;
+      disabled?: boolean;
+    }) => {
+      selectDisabled = !!disabled;
+
+      return <div>{children}</div>;
+    },
+
+    SelectContent: ({ children }: { children: ReactNode }) => (
+      <div>{children}</div>
+    ),
+
+    SelectItem: ({ children }: { children: ReactNode }) => (
+      <div>{children}</div>
+    ),
+
+    SelectTrigger: ({
+      children,
+    }: {
+      children: ReactNode;
+    }) => (
+      <button
+        type="button"
+        role="combobox"
+        disabled={selectDisabled}
+      >
+        {children}
+      </button>
+    ),
+
+    SelectValue: ({
+      placeholder,
+    }: {
+      placeholder?: string;
+    }) => (
+      <span>{placeholder}</span>
+    ),
+  };
+});
 
 vi.mock('@/components/ui/alert-dialog', () => ({
   AlertDialog: ({ children }: { children: ReactNode }) => <>{children}</>,
@@ -153,10 +194,14 @@ vi.mock('lucide-react', () => {
     BadgeCheck: Icon,
     Bell: Icon,
     User: Icon,
+    CreditCard: Icon,
+    XCircle: Icon,
+    AlertTriangle: Icon,
   };
 });
 
 import EducatorDashboard from '@/pages/EducatorDashboard';
+
 
 function renderDashboard(path: string) {
   const queryClient = new QueryClient({
@@ -184,9 +229,14 @@ describe('EducatorDashboard: certificado de clase completada', () => {
       expect(screen.getByDisplayValue('Solidity Avanzado')).toBeInTheDocument();
     });
 
-    expect(screen.getByDisplayValue('2026-07-21')).toBeInTheDocument();
-    expect(screen.getByDisplayValue('Clase Personalizada')).toBeInTheDocument();
-    expect(screen.getByText(/0xstudent/)).toBeInTheDocument();
+    expect(screen.getByDisplayValue('Solidity Avanzado')).toBeInTheDocument();
+expect(screen.getByDisplayValue('2026-07-21')).toBeInTheDocument();
+const certificateType = screen.getByLabelText(
+  'educatorDashboard.fieldType'
+);
+
+expect(certificateType).toHaveValue('Clase Personalizada');
+expect(screen.getByText(/0xstudent/)).toBeInTheDocument ();
 
     expect(screen.getByLabelText('educatorDashboard.fieldCertTitle')).toHaveAttribute('readonly');
     expect(screen.getByRole('combobox')).toBeDisabled();

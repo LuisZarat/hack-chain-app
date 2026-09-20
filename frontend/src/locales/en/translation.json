@@ -309,6 +309,8 @@
     "totalCandidates": "Total Candidates",
     "talentsAvailable": "Talents on the Platform",
     "walletLabel": "WALLET",
+    "Jobs" : "Jobs",
+    "Vacancies": "My vacancies",
     "logout": "Log out",
     "recruiterFallback": "Recruiter",
     "errorLoad": "Error loading talents.",
@@ -1179,8 +1181,151 @@
     "scanProfile": "Scan to view {{name}}'s profile"
   },
   "shareCertificate": {
-    "title": "Share certificate",
-    "shareText": "Check out my certificate on HackChain",
-    "scanCertificate": "Scan to view {{name}}"
+  "title": "Share Certificate",
+  "shareText": "Check out my certificate on HackChain",
+  "scanCertificate": "Scan to view {{name}}"
+},
+"jobTalent": {
+  "shellTitle": "HackChain Jobs",
+  "shellLogoLabel": "HackChain Jobs",
+  "loadingVacancies": "Loading vacancies",
+  "vacancyClosed": "Closed vacancy",
+  "closesToday": "Closes today",
+  "daysUntilClosing": "{{count}} days until closing",
+  "applications": "{{count}} applications",
+  "loadError": "We couldn't load the vacancies.",
+  "tryAgain": "Try again.",
+  "retry": "Retry",
+  "noResults": "We couldn't find vacancies matching those filters.",
+  "tryDifferentFilters": "Try another area, work mode, or search.",
+  "companyNotVerified": "Unverified company",
+  "unverifiedCompanyWarning": "HackChain does not verify the identity of companies. Never send money or banking information to apply.",
+
+  "back": "Back",
+  "pageTitle": "Find your next challenge.",
+  "pageDescription": "Contract-verifiable vacancies and projects looking for talent with good judgment.",
+  "filters": {
+    "label": "Job filters",
+    "searchLabel": "Search by position or company",
+    "searchPlaceholder": "Search by position or company",
+    "areaLabel": "Filter by area",
+    "allAreas": "All areas",
+    "modalityLabel": "Filter by work mode",
+    "allModalities": "All work modes",
+    "clear": "Clear filters"
+  },
+  "loading": "Loading opportunities",
+  "open": "{{count}} open opportunities",
+
+    "aboutPosition": "About the position",
+    "requirements": "Requirements",
+    "noLongerAccepts": "This vacancy is no longer accepting applications.",
+    "apply": {
+    "title": "Apply",
+    "loginMessage": "Sign in as Talent to apply.",
+    "login": "Sign in",
+    "talentOnly": "Only Talent accounts can apply.",
+    "success": "Your application was submitted successfully.",
+    "description": "Share only what you want. Certificates are optional.",
+    "noCertificates": "You don't have any certificates available to share.",
+    "certificateFallback": "Certificate {{identifier}}",
+    "message": "Message",
+    "optional": "optional",
+    "send": "Submit application",
+    "sending": "Submitting..."
+  },
+  "applicationsPage": {
+  "eyebrow": "Talent / Tracking",
+  "title": "My applications",
+  "description": "Check the status of each opportunity you applied to.",
+  "exploreOpenVacancies": "Explore open vacancies",
+  "submittedOn": "Submitted on",
+  "talentOnlyNotice": "This section is available for Talent accounts.",
+  "status": {
+    "enviada": "Submitted",
+    "vista": "Viewed",
+    "contactado": "Contacted",
+    "descartada": "Rejected",
+    "cerrada_sin_respuesta": "Closed without response"
   }
+}
+},
+
+"vacancyRecruiter": {
+  "applications": "{{count}} applications",
+  "editingVacancy": "You are editing this vacancy.",
+  "salaryLocked": "This vacancy already has applications. The salary cannot be modified.",
+  "fields": {
+    "position": "Position",
+    "company": "Company",
+    "area": "Area",
+    "modality": "Work mode",
+    "closingDate": "Closing date",
+    "salaryMin": "Minimum salary",
+    "salaryMax": "Maximum salary",
+    "currency": "Currency",
+    "period": "Period",
+    "country": "Country",
+    "city": "City",
+    "description": "Description",
+    "requirements": "Requirements"
+  },
+  "requirementsHint": "(one per line)",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "saveChanges": "Save changes",
+    "publish": "Publish",
+    "backToDashboard": "Back to dashboard",
+    "eyebrow": "Recruiter / Listings",
+  "title": "My vacancies",
+  
+  "openVacanciesCount": "{{count}} of 5 open",
+
+  "buttons": {
+    "publish": "Publish vacancy",
+    "publishFirst": "Publish your first vacancy",
+    "edit": "Edit",
+    "close": "Close",
+    "closing": "Closing..."
+  },
+  
+  "limit": {
+    "message": "You've reached the limit of 5 open vacancies. Close one to publish another."
+  },
+  
+  "empty": {
+    "title": "You don't have any vacancies yet",
+    "description": "Publish your first vacancy to start receiving applications from Talent."
+  },
+  
+  "sections": {
+    "active": "Active vacancies",
+    "history": "History",
+    "closed": "Closed vacancies"
+  },
+
+  "errors": {
+    "unexpected": "An unexpected error occurred. Please try again."
+  },
+    "applicants": {
+    "backToVacancies": "My vacancies",
+    "eyebrow": "RECRUITER / TALENT",
+    "defaultTitle": "Applicants",
+    "summary": "{{count}} applicants, sorted by date.",
+    "empty": "There are no applications for this vacancy yet.",
+    "talentWithoutName": "Talent without a name",
+    "viewProfile": "View profile",
+    "reject": "Reject",
+    "contact": "Contact",
+    "certificateFallback": "Certificate {{id}}",
+    "applicationStatusUpdated": "Application status updated."
+  },
+  "status": {
+  "enviada": "Submitted",
+  "vista": "Viewed",
+  "contactado": "Contacted",
+  "descartada": "Rejected",
+  "cerrada_sin_respuesta": "Closed without response"
+}
+}
 }

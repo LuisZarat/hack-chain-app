@@ -15,7 +15,6 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { renderHook, act, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AuthProvider, useAuth } from '@/contexts/AuthContext';
-import { MemoryRouter } from 'react-router-dom';
 import type { ReactNode } from 'react';
 
 vi.mock('@/config/walletConfig', () => ({
@@ -33,12 +32,17 @@ vi.mock('@/services/api', () => ({
 // ─── Wrapper ──────────────────────────────────────────────────────────────────
 
 function wrapper({ children }: { children: ReactNode }) {
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
   return (
     <QueryClientProvider client={queryClient}>
-      <MemoryRouter>
-        <AuthProvider>{children}</AuthProvider>
-      </MemoryRouter>
+      <AuthProvider>{children}</AuthProvider>
     </QueryClientProvider>
   );
 }
