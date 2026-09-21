@@ -200,7 +200,16 @@ describe("VacancyForm", () => {
 
     expect(screen.getByLabelText("Puesto")).toHaveValue("");
     expect(screen.getByLabelText("Empresa")).toHaveValue("");
-    expect(screen.getByLabelText("Fecha de cierre")).toHaveValue("");
+    const expectedClosingDate = new Date();
+    expectedClosingDate.setDate(expectedClosingDate.getDate() + 30);
+
+    const year = expectedClosingDate.getFullYear();
+    const month = String(expectedClosingDate.getMonth() + 1).padStart(2, "0");
+    const day = String(expectedClosingDate.getDate()).padStart(2, "0");
+
+    expect(screen.getByLabelText("Fecha de cierre")).toHaveValue(
+      `${year}-${month}-${day}`,
+    );
 
     expect(screen.getByLabelText("Salario mínimo")).toHaveValue(0);
     expect(screen.getByLabelText("Salario máximo")).toHaveValue(0);
