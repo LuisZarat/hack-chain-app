@@ -127,7 +127,7 @@ export function VacancyForm({
       if (closingDate < minClosingDate || closingDate > maxClosingDate) {
         setClosingDateError(t("vacancyRecruiter.closingDateRangeError"));
 
-        closingDateRef.current?.scrollIntoView({
+        closingDateRef.current?.scrollIntoView?.({
           behavior: "smooth",
           block: "center",
         });
